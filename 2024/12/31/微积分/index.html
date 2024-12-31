@@ -1,0 +1,675 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_tq6stt6tcg';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
+  
+  <title>
+    微积分 |
+    
+    likeclouders的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="[TOC] 微积分人生导师李军学会装模作样学会&#x3D;&#x3D;标准数学语言&#x3D;&#x3D;学会每一个公式的推导不要纠结于一分一秒的差距,创新最重要大学是人生最美好的时候,你有大量的时间可以提升自己,思考问题主要要靠自己 极限极限语言$\varepsilon -N$语言定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微积分">
+<meta property="og:url" content="http://example.com/2024/12/31/%E5%BE%AE%E7%A7%AF%E5%88%86/index.html">
+<meta property="og:site_name" content="likeclouders的博客">
+<meta property="og:description" content="[TOC] 微积分人生导师李军学会装模作样学会&#x3D;&#x3D;标准数学语言&#x3D;&#x3D;学会每一个公式的推导不要纠结于一分一秒的差距,创新最重要大学是人生最美好的时候,你有大量的时间可以提升自己,思考问题主要要靠自己 极限极限语言$\varepsilon -N$语言定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\i">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-31T00:08:39.000Z">
+<meta property="article:modified_time" content="2024-12-31T00:08:52.963Z">
+<meta property="article:author" content="likeclouders">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="likeclouders的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">Home</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">About</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">Friend</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="微积分">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">微积分</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-微积分" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/2024/12/31/%E5%BE%AE%E7%A7%AF%E5%88%86/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-12-31T00:08:39.000Z" itemprop="datePublished">2024-12-31</time>
+    <time style="display: none;" id="post-update-time">2024-12-31</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <p>[TOC]</p>
+<h1 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h1><h2 id="人生导师李军"><a href="#人生导师李军" class="headerlink" title="人生导师李军"></a>人生导师李军</h2><p>学会<strong>装模作样</strong><br>学会&#x3D;&#x3D;标准数学语言&#x3D;&#x3D;<br>学会每一个公式的推导<br>不要纠结于一分一秒的差距,创新最重要<br>大学是人生最美好的时候,你有大量的时间可以提升自己,思考问题<br>主要要靠自己</p>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h3 id="极限语言"><a href="#极限语言" class="headerlink" title="极限语言"></a>极限语言</h3><h4 id="varepsilon-N-语言"><a href="#varepsilon-N-语言" class="headerlink" title="$\varepsilon -N$语言"></a>$\varepsilon -N$语言</h4><h2 id="定义-设有数列-x-n-若存在A-in-R-对于任意的-varepsilon-0-存在-N-0-in-N-使得当-n-N-0-时-恒有-x-n-A-G-则称数列-x-n-的极限为-infty-记为-lim-n-to-infty-x-n-infty-varepsilon-delta-语言设函数-f-x-在-？x-0-的某个去心邻域内有定义-若对于任意的-varepsilon-0-存在-delta-0-使得当-00-使得当-0-无穷小量-若-lim-alpha-0-则称-alpha-是这一过程中的一个无穷小量-指对转换似乎很好用🤔"><a href="#定义-设有数列-x-n-若存在A-in-R-对于任意的-varepsilon-0-存在-N-0-in-N-使得当-n-N-0-时-恒有-x-n-A-G-则称数列-x-n-的极限为-infty-记为-lim-n-to-infty-x-n-infty-varepsilon-delta-语言设函数-f-x-在-？x-0-的某个去心邻域内有定义-若对于任意的-varepsilon-0-存在-delta-0-使得当-00-使得当-0-无穷小量-若-lim-alpha-0-则称-alpha-是这一过程中的一个无穷小量-指对转换似乎很好用🤔" class="headerlink" title="定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\in N$,使得当$n&gt;N_0$时,恒有$$|x_n-A|&lt;\varepsilon$$则称数列{$x_n$}以A为极限,也称{$x_n$}收敛于A,记为$$\lim_{x \to n}x_n&#x3D;A$$应用:求数列极限时方法:放缩$|x_n-A| &lt;f(n)&lt;\varepsilon$  解出n#### $ G -N$语言定义:设有数列${x_n}$,若对于任意的$G&gt;0$,存在$N_0 \in N$,使得当$n&gt;N_0$时,恒有$$x_n&gt;G$$则称数列${x_n}$的极限为$+ \infty$,记为$$\lim_{n \to + \infty}x_n&#x3D;+ \infty$$#### $\varepsilon - \delta$语言设函数$f(x)$在$？x_0$的某个去心邻域内有定义,若对于任意的$\varepsilon &gt;0$存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$A$,记为$$\lim_{x \to x_0}f(x)&#x3D;A$$#### $\varepsilon -  K$语言设函数$f(x)$在$(a,+\infty)$上有定义,若对于任意的$\varepsilon &gt;0$,存在$K \in R$,当$x&gt;K$时,恒有:$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$+\infty$时,$f(x)$的极限为$A$,记为$$\lim_{x \to +\infty}f(x)&#x3D;A$$#### $G-\delta$语言设函数$f(x)$在$x_0$的某个去心邻域内有定义,若对于任意的$G&gt;0$,存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$f(x)&gt;G$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$+\infty$,记为$$\lim_{x \to +x_0}f(x)&#x3D;+\infty$$### 极限求法#### 等价无穷小&gt; 无穷小量:若$\lim \alpha &#x3D; 0$,则称$\alpha$是这一过程中的一个无穷小量&gt; 指对转换似乎很好用🤔"></a>定义:<br>设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\in N$,使得当$n&gt;N_0$时,恒有<br>$$<br>|x_n-A|&lt;\varepsilon<br>$$<br>则称数列{$x_n$}以A为极限,也称{$x_n$}收敛于A,记为<br>$$<br>\lim_{x \to n}x_n&#x3D;A<br>$$<br>应用:求数列极限时<br>方法:放缩<br>$|x_n-A| &lt;f(n)&lt;\varepsilon$  解出n<br>#### $ G -N$语言<br>定义:<br>设有数列${x_n}$,若对于任意的$G&gt;0$,存在$N_0 \in N$,使得当$n&gt;N_0$时,<br>恒有<br>$$<br>x_n&gt;G<br>$$<br>则称数列${x_n}$的极限为$+ \infty$,记为<br>$$<br>\lim_{n \to + \infty}x_n&#x3D;+ \infty<br>$$<br>#### $\varepsilon - \delta$语言<br>设函数$f(x)$在$？x_0$的某个去心邻域内有定义,若对于任意的$\varepsilon &gt;0$存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有<br>$$<br>|f(x)-A|&lt;\varepsilon<br>$$<br>则称,$x$趋近于$x_0$时,$f(x)$的极限为$A$,记为<br>$$<br>\lim_{x \to x_0}f(x)&#x3D;A<br>$$<br>#### $\varepsilon -  K$语言<br>设函数$f(x)$在$(a,+\infty)$上有定义,若对于任意的$\varepsilon &gt;0$,存在$K \in R$,当$x&gt;K$时,恒有:<br>$$<br>|f(x)-A|&lt;\varepsilon<br>$$<br>则称,$x$趋近于$+\infty$时,$f(x)$的极限为$A$,记为<br>$$<br>\lim_{x \to +\infty}f(x)&#x3D;A<br>$$<br>#### $G-\delta$语言<br>设函数$f(x)$在$x_0$的某个去心邻域内有定义,若对于任意的$G&gt;0$,存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有<br>$$<br>f(x)&gt;G<br>$$<br>则称,$x$趋近于$x_0$时,$f(x)$的极限为$+\infty$,记为<br>$$<br>\lim_{x \to +x_0}f(x)&#x3D;+\infty<br>$$<br>### 极限求法<br>#### 等价无穷小<br>&gt; 无穷小量:若$\lim \alpha &#x3D; 0$,则称$\alpha$是这一过程中的一个无穷小量<br>&gt; 指对转换似乎很好用🤔</h2><h2 id="lim-x-0-时-x-sim-sin-x-sim-arcsin-x-sim-arctan-x-1-cos-x-sim-frac-1-2-x-2-ln-x-sim-x-1-e-x-sim-x-1-a-x-1-sim-x-ln-a-1-x-alpha-sim-1-alpha-x-极限的四则运算设-lim-X-A-lim-Y-B-则有-lim-X-pm-Y-lim-X-pm-lim-Y-A-pm-B-lim-X-cdot-Y-lim-X-cdot-lim-Y-A-cdot-B-lim-frac-X-Y-frac-lim-X-lim-Y-frac-A-B-夹逼准则设在某极限过程中-X-le-Y-le-Z-且-lim-X-lim-Z-A-则-lim-Y-A-单调有界准则单调有界的数列必收敛单调有界的函数必有极限-基本极限第一个基本极限-lim-x-to-0-frac-sin-x-x-1-第二个基本极限-lim-x-to-infty-1-frac-1-x-x-e-洛必达法则-导数-公式-莱布尼兹公式若函数-u-x-v-x-都有-n-阶导数-则他们的乘积-u-x-v-x-也有-n-阶导数-uv-n-sum-k-0-n-C-n-k-u-n-k-v-k-泰勒公式1-皮亚诺余项型设-f-x-在含有-x-0-的邻域内有直到n阶导数-则当-x-longrightarrow-x-0-时-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-o-x-x-0-n-2-拉格朗日余项型设-f-x-在含有-x-0-的邻域U内有直到n-1阶导数-则-f-在U内的任意点-x-成立-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-frac-f-n-1-xi-n-1-x-x-0-n-1-费马引理设函数-f-x-在点-x-0-某个邻域-U-内有定义-且在-x-0-可导-如果对于任意-x-in-U-有-f-x-le-f-x-0-or-f-x-ge-f-x-0-则-f’-x-0-0-洛尔定理设-f-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导3-f-a-f-b-则在-a-b-内至少有一点-xi-使得-f’-xi-0-拉格朗日定理若函数-f-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导则在-a-b-内至少存在一点-xi-使得-f’-xi-frac-f-a-f-b-b-a-柯西中值定理若函数-f-x-和-g-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导3-在-a-b-内-g’-x-处处不为零则在-a-b-中至少有一点-xi-使得-frac-f-a-f-b-g-a-g-b-frac-f’-xi-g’-xi-洛必达法则设函数-f-x-与函数-g-x-满足下列条件1-lim-x-to-a-f-x-0-lim-x-to-a-g-x-0-2-f’-x-g’-x-存在-且-g’-x-ne-0-3-lim-x-to-a-frac-f’-x-g’-x-K-则有-lim-x-to-a-frac-f-x-g-x-lim-x-to-a-frac-f’-x-g’-x-K-导数的应用-曲线的渐进线1-铅直渐进线-当-x-从单侧趋于-x-0-时-f-x-趋于-infty-或-infty-则直线-x-x-0-是曲线的渐近线2-水平渐近线-当-x-趋于-infty-或-infty-f-x-趋于-c-则直线-y-c-是曲线的渐进线3-斜渐近线-曲线有渐进线-y-ax-b-a-ne-0"><a href="#lim-x-0-时-x-sim-sin-x-sim-arcsin-x-sim-arctan-x-1-cos-x-sim-frac-1-2-x-2-ln-x-sim-x-1-e-x-sim-x-1-a-x-1-sim-x-ln-a-1-x-alpha-sim-1-alpha-x-极限的四则运算设-lim-X-A-lim-Y-B-则有-lim-X-pm-Y-lim-X-pm-lim-Y-A-pm-B-lim-X-cdot-Y-lim-X-cdot-lim-Y-A-cdot-B-lim-frac-X-Y-frac-lim-X-lim-Y-frac-A-B-夹逼准则设在某极限过程中-X-le-Y-le-Z-且-lim-X-lim-Z-A-则-lim-Y-A-单调有界准则单调有界的数列必收敛单调有界的函数必有极限-基本极限第一个基本极限-lim-x-to-0-frac-sin-x-x-1-第二个基本极限-lim-x-to-infty-1-frac-1-x-x-e-洛必达法则-导数-公式-莱布尼兹公式若函数-u-x-v-x-都有-n-阶导数-则他们的乘积-u-x-v-x-也有-n-阶导数-uv-n-sum-k-0-n-C-n-k-u-n-k-v-k-泰勒公式1-皮亚诺余项型设-f-x-在含有-x-0-的邻域内有直到n阶导数-则当-x-longrightarrow-x-0-时-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-o-x-x-0-n-2-拉格朗日余项型设-f-x-在含有-x-0-的邻域U内有直到n-1阶导数-则-f-在U内的任意点-x-成立-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-frac-f-n-1-xi-n-1-x-x-0-n-1-费马引理设函数-f-x-在点-x-0-某个邻域-U-内有定义-且在-x-0-可导-如果对于任意-x-in-U-有-f-x-le-f-x-0-or-f-x-ge-f-x-0-则-f’-x-0-0-洛尔定理设-f-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导3-f-a-f-b-则在-a-b-内至少有一点-xi-使得-f’-xi-0-拉格朗日定理若函数-f-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导则在-a-b-内至少存在一点-xi-使得-f’-xi-frac-f-a-f-b-b-a-柯西中值定理若函数-f-x-和-g-x-满足条件-1-在-a-b-上连续2-在-a-b-上可导3-在-a-b-内-g’-x-处处不为零则在-a-b-中至少有一点-xi-使得-frac-f-a-f-b-g-a-g-b-frac-f’-xi-g’-xi-洛必达法则设函数-f-x-与函数-g-x-满足下列条件1-lim-x-to-a-f-x-0-lim-x-to-a-g-x-0-2-f’-x-g’-x-存在-且-g’-x-ne-0-3-lim-x-to-a-frac-f’-x-g’-x-K-则有-lim-x-to-a-frac-f-x-g-x-lim-x-to-a-frac-f’-x-g’-x-K-导数的应用-曲线的渐进线1-铅直渐进线-当-x-从单侧趋于-x-0-时-f-x-趋于-infty-或-infty-则直线-x-x-0-是曲线的渐近线2-水平渐近线-当-x-趋于-infty-或-infty-f-x-趋于-c-则直线-y-c-是曲线的渐进线3-斜渐近线-曲线有渐进线-y-ax-b-a-ne-0" class="headerlink" title="$\lim x &#x3D; 0$ 时$$x \sim  \sin x \sim \arcsin x \sim \arctan x$$$$1-\cos x \sim \frac{1}{2}x^{2}$$$$\ln_{}{x} \sim x-1,e^{x}\sim x+1$$$$a^{x}-1\sim\ x ln_{}{a}$$$$(1+x)^{\alpha} \sim 1+\alpha x$$#### 极限的四则运算设$\lim X &#x3D; A,\lim Y &#x3D; B$,则有$$\lim(X \pm Y) &#x3D; \lim X \pm \lim Y &#x3D; A \pm B$$$$\lim(X \cdot Y)&#x3D;\lim X \cdot \lim Y &#x3D; A \cdot B$$$$\lim \frac{X}{Y} &#x3D; \frac{\lim X}{\lim Y} &#x3D; \frac{A}{B}$$#### 夹逼准则设在某极限过程中$X \le Y \le Z$,且$\lim X &#x3D; \lim Z &#x3D; A$,则$\lim Y &#x3D; A$#### 单调有界准则单调有界的数列必收敛单调有界的函数必有极限#### 基本极限第一个基本极限$$\lim_{x \to 0}\frac{\sin x}{x} &#x3D; 1$$第二个基本极限$$\lim_{x \to \infty }(1+\frac{1}{x})^{x}&#x3D;e$$#### 洛必达法则## 导数### 公式#### 莱布尼兹公式若函数$u(x),v(x)$都有$n$阶导数,则他们的乘积$u(x)v(x)$也有$n$阶导数$$(uv)^{(n)}&#x3D;\sum_{k&#x3D;0}^{n}C_{n}^{k}u^{(n-k)}v^{(k)}$$#### 泰勒公式1. 皮亚诺余项型设$f(x)$在含有$x_0$的邻域内有直到n阶导数,则当$x \longrightarrow x_0$时$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+o((x-x_0)^{n})$$2. 拉格朗日余项型设$f(x)$在含有$x_0$的邻域U内有直到n+1阶导数,则$f$在U内的任意点$x$成立$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}$$#### 费马引理设函数$f(x)$在点$x_0$某个邻域$U$内有定义,且在$x_0$可导,如果对于任意$x \in U$,有$$f(x) \le f(x_0)(or f(x)\ge f(x_0))$$则$f’(x_0)&#x3D;0$#### 洛尔定理设$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. $f(a)&#x3D;f(b)$则在$(a,b)$内至少有一点$\xi$,使得$$f’(\xi)&#x3D;0$$#### 拉格朗日定理若函数$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导则在$(a,b)$内至少存在一点$\xi$,使得$$f’(\xi)&#x3D;\frac{f(a)-f(b)}{b-a}$$#### 柯西中值定理若函数$f(x)$和$g(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. 在$(a,b)$内$g’(x)$处处不为零则在$(a,b)$中至少有一点$\xi$使得$$\frac{f(a)-f(b)}{g(a)-g(b)}&#x3D;\frac{f’(\xi)}{g’(\xi)}$$#### 洛必达法则设函数$f(x)$与函数$g(x)$满足下列条件1. $\lim_{x \to a}f(x) &#x3D; 0,\lim_{x \to a}g(x) &#x3D; 0$2. $f’(x),g’(x)$存在,且$g’(x) \ne 0$3. $\lim_{x \to a}\frac{f’(x)}{g’(x)}&#x3D;K$则有$$\lim_{x \to a}\frac{f(x)}{g(x)}&#x3D; \lim_{x \to a}\frac{f’(x)}{g’(x)} &#x3D; K$$### 导数的应用#### 曲线的渐进线1. 铅直渐进线:当$x$从单侧趋于$x_0$时,$f(x)$趋于$+\infty$或$-\infty$,则直线$x&#x3D;x_0$是曲线的渐近线2. 水平渐近线:,当$x$趋于$+\infty$或$-\infty$,$f(x)$趋于$c$,则直线$y&#x3D;c$是曲线的渐进线3. 斜渐近线:曲线有渐进线$y&#x3D;ax+b(a \ne 0)$"></a>$\lim x &#x3D; 0$ 时<br>$$<br>x \sim  \sin x \sim \arcsin x \sim \arctan x<br>$$<br>$$<br>1-\cos x \sim \frac{1}{2}x^{2}<br>$$<br>$$<br>\ln_{}{x} \sim x-1,e^{x}\sim x+1<br>$$<br>$$<br>a^{x}-1\sim\ x ln_{}{a}<br>$$<br>$$<br>(1+x)^{\alpha} \sim 1+\alpha x<br>$$<br>#### 极限的四则运算<br>设$\lim X &#x3D; A,\lim Y &#x3D; B$,则有<br>$$<br>\lim(X \pm Y) &#x3D; \lim X \pm \lim Y &#x3D; A \pm B<br>$$<br>$$<br>\lim(X \cdot Y)&#x3D;\lim X \cdot \lim Y &#x3D; A \cdot B<br>$$<br>$$<br>\lim \frac{X}{Y} &#x3D; \frac{\lim X}{\lim Y} &#x3D; \frac{A}{B}<br>$$<br>#### 夹逼准则<br>设在某极限过程中$X \le Y \le Z$,且$\lim X &#x3D; \lim Z &#x3D; A$,则$\lim Y &#x3D; A$<br>#### 单调有界准则<br>单调有界的数列必收敛<br>单调有界的函数必有极限<br>#### 基本极限<br>第一个基本极限<br>$$<br>\lim_{x \to 0}\frac{\sin x}{x} &#x3D; 1<br>$$<br>第二个基本极限<br>$$<br>\lim_{x \to \infty }(1+\frac{1}{x})^{x}&#x3D;e<br>$$<br>#### 洛必达法则<br>## 导数<br>### 公式<br>#### 莱布尼兹公式<br>若函数$u(x),v(x)$都有$n$阶导数,则他们的乘积$u(x)v(x)$也有$n$阶导数<br>$$<br>(uv)^{(n)}&#x3D;\sum_{k&#x3D;0}^{n}C_{n}^{k}u^{(n-k)}v^{(k)}<br>$$<br>#### 泰勒公式<br>1. 皮亚诺余项型<br>设$f(x)$在含有$x_0$的邻域内有直到n阶导数,则当$x \longrightarrow x_0$时<br>$$<br>f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+o((x-x_0)^{n})<br>$$<br>2. 拉格朗日余项型<br>设$f(x)$在含有$x_0$的邻域U内有直到n+1阶导数,则$f$在U内的任意点$x$成立<br>$$<br>f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}<br>$$<br>#### 费马引理<br>设函数$f(x)$在点$x_0$某个邻域$U$内有定义,且在$x_0$可导,如果对于任意$x \in U$,有<br>$$<br>f(x) \le f(x_0)(or f(x)\ge f(x_0))<br>$$<br>则$f’(x_0)&#x3D;0$<br>#### 洛尔定理<br>设$f(x)$满足条件:<br>1. 在$[a,b]$上连续<br>2. 在$(a,b)$上可导<br>3. $f(a)&#x3D;f(b)$<br>则在$(a,b)$内至少有一点$\xi$,使得<br>$$<br>f’(\xi)&#x3D;0<br>$$<br>#### 拉格朗日定理<br>若函数$f(x)$满足条件:<br>1. 在$[a,b]$上连续<br>2. 在$(a,b)$上可导<br>则在$(a,b)$内至少存在一点$\xi$,使得<br>$$<br>f’(\xi)&#x3D;\frac{f(a)-f(b)}{b-a}<br>$$<br>#### 柯西中值定理<br>若函数$f(x)$和$g(x)$满足条件:<br>1. 在$[a,b]$上连续<br>2. 在$(a,b)$上可导<br>3. 在$(a,b)$内$g’(x)$处处不为零<br>则在$(a,b)$中至少有一点$\xi$使得<br>$$<br>\frac{f(a)-f(b)}{g(a)-g(b)}&#x3D;\frac{f’(\xi)}{g’(\xi)}<br>$$<br>#### 洛必达法则<br>设函数$f(x)$与函数$g(x)$满足下列条件<br>1. $\lim_{x \to a}f(x) &#x3D; 0,\lim_{x \to a}g(x) &#x3D; 0$<br>2. $f’(x),g’(x)$存在,且$g’(x) \ne 0$<br>3. $\lim_{x \to a}\frac{f’(x)}{g’(x)}&#x3D;K$<br>则有<br>$$<br>\lim_{x \to a}\frac{f(x)}{g(x)}&#x3D; \lim_{x \to a}\frac{f’(x)}{g’(x)} &#x3D; K<br>$$<br>### 导数的应用<br>#### 曲线的渐进线<br>1. 铅直渐进线:当$x$从单侧趋于$x_0$时,$f(x)$趋于$+\infty$或$-\infty$,则直线$x&#x3D;x_0$是曲线的渐近线<br>2. 水平渐近线:,当$x$趋于$+\infty$或$-\infty$,$f(x)$趋于$c$,则直线$y&#x3D;c$是曲线的渐进线<br>3. 斜渐近线:曲线有渐进线$y&#x3D;ax+b(a \ne 0)$</h2><p>$$<br>a&#x3D;\lim_{x \to \infty }\frac{f(x)}{x}, b&#x3D;\lim_{x \to \infty}(f(x)-ax)<br>$$</p>
+<h2 id="一元函数积分"><a href="#一元函数积分" class="headerlink" title="一元函数积分"></a>一元函数积分</h2><h3 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h3><p>设函数$f(x)$在某区间$U$上定义,$f(x)$的全体原函数称为$f(x)$的不定积分,记为+<br>$$<br>\int f(x)dx<br>$$<br>若$F(x)$是$f(x)$的某一个原函数,则<br>$$<br>\int f(x)dx&#x3D;F(x)+C(\forall C\in R)<br>$$</p>
+<h3 id="不定积分求法"><a href="#不定积分求法" class="headerlink" title="不定积分求法"></a>不定积分求法</h3><p>本质:转化成能求出原函数的形式</p>
+<ul>
+<li>换元(普通,三角,倒变量)</li>
+<li>分部积分法<br>$$<br>\int udv&#x3D;uv-\int vdu<br>$$</li>
+</ul>
+<h3 id="定积分"><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h3><h3 id="定积分定理"><a href="#定积分定理" class="headerlink" title="定积分定理"></a>定积分定理</h3><h4 id="积分中值定理"><a href="#积分中值定理" class="headerlink" title="积分中值定理"></a>积分中值定理</h4><p>设函数$f(x),g(x)$在$[a,b]$上连续,且$g(x)$在$[a,b]$上不变号,则存在$\xi \in (a,b)$,使得<br>$$<br>\int_{a}^{b}f(x)g(x)dx&#x3D;f(\xi)\int_{a}^{b}g(x)dx<br>$$<br>令$g(x)&#x3D;1$,得<br>$$<br>\int_{a}^{b}f(x)dx&#x3D;f(\xi)(b-a)<br>$$</p>
+<h4 id="原函数存在定理-微积分学第一基本定理"><a href="#原函数存在定理-微积分学第一基本定理" class="headerlink" title="原函数存在定理(微积分学第一基本定理)"></a>原函数存在定理(微积分学第一基本定理)</h4><p>设$I$为任一闭区间,函数$f(x)$在$I$上可积,$c \in I$,则<br>$$<br>\phi(x)&#x3D;\int_{c}^{x}f(t)dt<br>$$<br>称为变上限定积分,且<br>$$<br>\phi ‘(x)&#x3D;f(x)<br>$$</p>
+<h4 id="牛顿-莱布尼兹公式-微积分学第二基本定理"><a href="#牛顿-莱布尼兹公式-微积分学第二基本定理" class="headerlink" title="牛顿-莱布尼兹公式(微积分学第二基本定理)"></a>牛顿-莱布尼兹公式(微积分学第二基本定理)</h4><p>设函数$f(x)$在闭区间$[a,b]$上连续,$F(x)$是$f(x)$任一原函数,则<br>$$<br>\int_{a}^{b}f(x)dx&#x3D;F(b)-F(a)<br>$$</p>
+<h3 id="定积分求法"><a href="#定积分求法" class="headerlink" title="定积分求法"></a>定积分求法</h3><ul>
+<li>转成不定积分</li>
+<li>利用对称性</li>
+<li>定积分换元法 </li>
+<li>定积分分部积分法</li>
+</ul>
+<h3 id="定积分应用"><a href="#定积分应用" class="headerlink" title="定积分应用"></a>定积分应用</h3><p>微元法求面积和体积<br>方法</p>
+<ol>
+<li>求微元$dA(\bigtriangleup A)$</li>
+<li>积分</li>
+</ol>
+<hr>
+<p>例子</p>
+<h2 id="好题"><a href="#好题" class="headerlink" title="好题"></a>好题</h2><ol>
+<li>求$\int \frac{x^3}{(1+x^2)^{3&#x2F;2}}  $</li>
+</ol>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ol>
+<li>设$t&#x3D;\sqrt{1+x^2}$,而不是三角换元</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="/images/banner.webp" data-sizes="auto" alt="需求与商业模式" class="lazyload">
+          
+        
+        <a href="/2024/12/31/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            需求与商业模式
+          
+        </h3>
+      </div>
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="数据结构与算法" class="lazyload">
+        
+      
+      <a href="/2024/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          数据结构与算法
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">微积分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%94%9F%E5%AF%BC%E5%B8%88%E6%9D%8E%E5%86%9B"><span class="toc-number">1.1.</span> <span class="toc-text">人生导师李军</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E9%99%90"><span class="toc-number">1.2.</span> <span class="toc-text">极限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E9%99%90%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">极限语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#varepsilon-N-%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">$\varepsilon -N$语言</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-%E8%AE%BE%E6%9C%89%E6%95%B0%E5%88%97-x-n-%E8%8B%A5%E5%AD%98%E5%9C%A8A-in-R-%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F%E7%9A%84-varepsilon-0-%E5%AD%98%E5%9C%A8-N-0-in-N-%E4%BD%BF%E5%BE%97%E5%BD%93-n-N-0-%E6%97%B6-%E6%81%92%E6%9C%89-x-n-A-G-%E5%88%99%E7%A7%B0%E6%95%B0%E5%88%97-x-n-%E7%9A%84%E6%9E%81%E9%99%90%E4%B8%BA-infty-%E8%AE%B0%E4%B8%BA-lim-n-to-infty-x-n-infty-varepsilon-delta-%E8%AF%AD%E8%A8%80%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E5%9C%A8-%EF%BC%9Fx-0-%E7%9A%84%E6%9F%90%E4%B8%AA%E5%8E%BB%E5%BF%83%E9%82%BB%E5%9F%9F%E5%86%85%E6%9C%89%E5%AE%9A%E4%B9%89-%E8%8B%A5%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F%E7%9A%84-varepsilon-0-%E5%AD%98%E5%9C%A8-delta-0-%E4%BD%BF%E5%BE%97%E5%BD%93-00-%E4%BD%BF%E5%BE%97%E5%BD%93-0-%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F-%E8%8B%A5-lim-alpha-0-%E5%88%99%E7%A7%B0-alpha-%E6%98%AF%E8%BF%99%E4%B8%80%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F-%E6%8C%87%E5%AF%B9%E8%BD%AC%E6%8D%A2%E4%BC%BC%E4%B9%8E%E5%BE%88%E5%A5%BD%E7%94%A8%F0%9F%A4%94"><span class="toc-number">1.3.</span> <span class="toc-text">定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\in N$,使得当$n&gt;N_0$时,恒有$$|x_n-A|&lt;\varepsilon$$则称数列{$x_n$}以A为极限,也称{$x_n$}收敛于A,记为$$\lim_{x \to n}x_n&#x3D;A$$应用:求数列极限时方法:放缩$|x_n-A| &lt;f(n)&lt;\varepsilon$  解出n#### $ G -N$语言定义:设有数列${x_n}$,若对于任意的$G&gt;0$,存在$N_0 \in N$,使得当$n&gt;N_0$时,恒有$$x_n&gt;G$$则称数列${x_n}$的极限为$+ \infty$,记为$$\lim_{n \to + \infty}x_n&#x3D;+ \infty$$#### $\varepsilon - \delta$语言设函数$f(x)$在$？x_0$的某个去心邻域内有定义,若对于任意的$\varepsilon &gt;0$存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$A$,记为$$\lim_{x \to x_0}f(x)&#x3D;A$$#### $\varepsilon -  K$语言设函数$f(x)$在$(a,+\infty)$上有定义,若对于任意的$\varepsilon &gt;0$,存在$K \in R$,当$x&gt;K$时,恒有:$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$+\infty$时,$f(x)$的极限为$A$,记为$$\lim_{x \to +\infty}f(x)&#x3D;A$$#### $G-\delta$语言设函数$f(x)$在$x_0$的某个去心邻域内有定义,若对于任意的$G&gt;0$,存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$f(x)&gt;G$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$+\infty$,记为$$\lim_{x \to +x_0}f(x)&#x3D;+\infty$$### 极限求法#### 等价无穷小&gt; 无穷小量:若$\lim \alpha &#x3D; 0$,则称$\alpha$是这一过程中的一个无穷小量&gt; 指对转换似乎很好用🤔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lim-x-0-%E6%97%B6-x-sim-sin-x-sim-arcsin-x-sim-arctan-x-1-cos-x-sim-frac-1-2-x-2-ln-x-sim-x-1-e-x-sim-x-1-a-x-1-sim-x-ln-a-1-x-alpha-sim-1-alpha-x-%E6%9E%81%E9%99%90%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E8%AE%BE-lim-X-A-lim-Y-B-%E5%88%99%E6%9C%89-lim-X-pm-Y-lim-X-pm-lim-Y-A-pm-B-lim-X-cdot-Y-lim-X-cdot-lim-Y-A-cdot-B-lim-frac-X-Y-frac-lim-X-lim-Y-frac-A-B-%E5%A4%B9%E9%80%BC%E5%87%86%E5%88%99%E8%AE%BE%E5%9C%A8%E6%9F%90%E6%9E%81%E9%99%90%E8%BF%87%E7%A8%8B%E4%B8%AD-X-le-Y-le-Z-%E4%B8%94-lim-X-lim-Z-A-%E5%88%99-lim-Y-A-%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%87%86%E5%88%99%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E7%9A%84%E6%95%B0%E5%88%97%E5%BF%85%E6%94%B6%E6%95%9B%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E7%9A%84%E5%87%BD%E6%95%B0%E5%BF%85%E6%9C%89%E6%9E%81%E9%99%90-%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90-lim-x-to-0-frac-sin-x-x-1-%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90-lim-x-to-infty-1-frac-1-x-x-e-%E6%B4%9B%E5%BF%85%E8%BE%BE%E6%B3%95%E5%88%99-%E5%AF%BC%E6%95%B0-%E5%85%AC%E5%BC%8F-%E8%8E%B1%E5%B8%83%E5%B0%BC%E5%85%B9%E5%85%AC%E5%BC%8F%E8%8B%A5%E5%87%BD%E6%95%B0-u-x-v-x-%E9%83%BD%E6%9C%89-n-%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99%E4%BB%96%E4%BB%AC%E7%9A%84%E4%B9%98%E7%A7%AF-u-x-v-x-%E4%B9%9F%E6%9C%89-n-%E9%98%B6%E5%AF%BC%E6%95%B0-uv-n-sum-k-0-n-C-n-k-u-n-k-v-k-%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F1-%E7%9A%AE%E4%BA%9A%E8%AF%BA%E4%BD%99%E9%A1%B9%E5%9E%8B%E8%AE%BE-f-x-%E5%9C%A8%E5%90%AB%E6%9C%89-x-0-%E7%9A%84%E9%82%BB%E5%9F%9F%E5%86%85%E6%9C%89%E7%9B%B4%E5%88%B0n%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99%E5%BD%93-x-longrightarrow-x-0-%E6%97%B6-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-o-x-x-0-n-2-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%BD%99%E9%A1%B9%E5%9E%8B%E8%AE%BE-f-x-%E5%9C%A8%E5%90%AB%E6%9C%89-x-0-%E7%9A%84%E9%82%BB%E5%9F%9FU%E5%86%85%E6%9C%89%E7%9B%B4%E5%88%B0n-1%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99-f-%E5%9C%A8U%E5%86%85%E7%9A%84%E4%BB%BB%E6%84%8F%E7%82%B9-x-%E6%88%90%E7%AB%8B-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-frac-f-n-1-xi-n-1-x-x-0-n-1-%E8%B4%B9%E9%A9%AC%E5%BC%95%E7%90%86%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E5%9C%A8%E7%82%B9-x-0-%E6%9F%90%E4%B8%AA%E9%82%BB%E5%9F%9F-U-%E5%86%85%E6%9C%89%E5%AE%9A%E4%B9%89-%E4%B8%94%E5%9C%A8-x-0-%E5%8F%AF%E5%AF%BC-%E5%A6%82%E6%9E%9C%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F-x-in-U-%E6%9C%89-f-x-le-f-x-0-or-f-x-ge-f-x-0-%E5%88%99-f%E2%80%99-x-0-0-%E6%B4%9B%E5%B0%94%E5%AE%9A%E7%90%86%E8%AE%BE-f-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC3-f-a-f-b-%E5%88%99%E5%9C%A8-a-b-%E5%86%85%E8%87%B3%E5%B0%91%E6%9C%89%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-f%E2%80%99-xi-0-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%AE%9A%E7%90%86%E8%8B%A5%E5%87%BD%E6%95%B0-f-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC%E5%88%99%E5%9C%A8-a-b-%E5%86%85%E8%87%B3%E5%B0%91%E5%AD%98%E5%9C%A8%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-f%E2%80%99-xi-frac-f-a-f-b-b-a-%E6%9F%AF%E8%A5%BF%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E8%8B%A5%E5%87%BD%E6%95%B0-f-x-%E5%92%8C-g-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC3-%E5%9C%A8-a-b-%E5%86%85-g%E2%80%99-x-%E5%A4%84%E5%A4%84%E4%B8%8D%E4%B8%BA%E9%9B%B6%E5%88%99%E5%9C%A8-a-b-%E4%B8%AD%E8%87%B3%E5%B0%91%E6%9C%89%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-frac-f-a-f-b-g-a-g-b-frac-f%E2%80%99-xi-g%E2%80%99-xi-%E6%B4%9B%E5%BF%85%E8%BE%BE%E6%B3%95%E5%88%99%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E4%B8%8E%E5%87%BD%E6%95%B0-g-x-%E6%BB%A1%E8%B6%B3%E4%B8%8B%E5%88%97%E6%9D%A1%E4%BB%B61-lim-x-to-a-f-x-0-lim-x-to-a-g-x-0-2-f%E2%80%99-x-g%E2%80%99-x-%E5%AD%98%E5%9C%A8-%E4%B8%94-g%E2%80%99-x-ne-0-3-lim-x-to-a-frac-f%E2%80%99-x-g%E2%80%99-x-K-%E5%88%99%E6%9C%89-lim-x-to-a-frac-f-x-g-x-lim-x-to-a-frac-f%E2%80%99-x-g%E2%80%99-x-K-%E5%AF%BC%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8-%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%9B%E7%BA%BF1-%E9%93%85%E7%9B%B4%E6%B8%90%E8%BF%9B%E7%BA%BF-%E5%BD%93-x-%E4%BB%8E%E5%8D%95%E4%BE%A7%E8%B6%8B%E4%BA%8E-x-0-%E6%97%B6-f-x-%E8%B6%8B%E4%BA%8E-infty-%E6%88%96-infty-%E5%88%99%E7%9B%B4%E7%BA%BF-x-x-0-%E6%98%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%91%E7%BA%BF2-%E6%B0%B4%E5%B9%B3%E6%B8%90%E8%BF%91%E7%BA%BF-%E5%BD%93-x-%E8%B6%8B%E4%BA%8E-infty-%E6%88%96-infty-f-x-%E8%B6%8B%E4%BA%8E-c-%E5%88%99%E7%9B%B4%E7%BA%BF-y-c-%E6%98%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%9B%E7%BA%BF3-%E6%96%9C%E6%B8%90%E8%BF%91%E7%BA%BF-%E6%9B%B2%E7%BA%BF%E6%9C%89%E6%B8%90%E8%BF%9B%E7%BA%BF-y-ax-b-a-ne-0"><span class="toc-number">1.4.</span> <span class="toc-text">$\lim x &#x3D; 0$ 时$$x \sim  \sin x \sim \arcsin x \sim \arctan x$$$$1-\cos x \sim \frac{1}{2}x^{2}$$$$\ln_{}{x} \sim x-1,e^{x}\sim x+1$$$$a^{x}-1\sim\ x ln_{}{a}$$$$(1+x)^{\alpha} \sim 1+\alpha x$$#### 极限的四则运算设$\lim X &#x3D; A,\lim Y &#x3D; B$,则有$$\lim(X \pm Y) &#x3D; \lim X \pm \lim Y &#x3D; A \pm B$$$$\lim(X \cdot Y)&#x3D;\lim X \cdot \lim Y &#x3D; A \cdot B$$$$\lim \frac{X}{Y} &#x3D; \frac{\lim X}{\lim Y} &#x3D; \frac{A}{B}$$#### 夹逼准则设在某极限过程中$X \le Y \le Z$,且$\lim X &#x3D; \lim Z &#x3D; A$,则$\lim Y &#x3D; A$#### 单调有界准则单调有界的数列必收敛单调有界的函数必有极限#### 基本极限第一个基本极限$$\lim_{x \to 0}\frac{\sin x}{x} &#x3D; 1$$第二个基本极限$$\lim_{x \to \infty }(1+\frac{1}{x})^{x}&#x3D;e$$#### 洛必达法则## 导数### 公式#### 莱布尼兹公式若函数$u(x),v(x)$都有$n$阶导数,则他们的乘积$u(x)v(x)$也有$n$阶导数$$(uv)^{(n)}&#x3D;\sum_{k&#x3D;0}^{n}C_{n}^{k}u^{(n-k)}v^{(k)}$$#### 泰勒公式1. 皮亚诺余项型设$f(x)$在含有$x_0$的邻域内有直到n阶导数,则当$x \longrightarrow x_0$时$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+o((x-x_0)^{n})$$2. 拉格朗日余项型设$f(x)$在含有$x_0$的邻域U内有直到n+1阶导数,则$f$在U内的任意点$x$成立$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}$$#### 费马引理设函数$f(x)$在点$x_0$某个邻域$U$内有定义,且在$x_0$可导,如果对于任意$x \in U$,有$$f(x) \le f(x_0)(or f(x)\ge f(x_0))$$则$f’(x_0)&#x3D;0$#### 洛尔定理设$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. $f(a)&#x3D;f(b)$则在$(a,b)$内至少有一点$\xi$,使得$$f’(\xi)&#x3D;0$$#### 拉格朗日定理若函数$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导则在$(a,b)$内至少存在一点$\xi$,使得$$f’(\xi)&#x3D;\frac{f(a)-f(b)}{b-a}$$#### 柯西中值定理若函数$f(x)$和$g(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. 在$(a,b)$内$g’(x)$处处不为零则在$(a,b)$中至少有一点$\xi$使得$$\frac{f(a)-f(b)}{g(a)-g(b)}&#x3D;\frac{f’(\xi)}{g’(\xi)}$$#### 洛必达法则设函数$f(x)$与函数$g(x)$满足下列条件1. $\lim_{x \to a}f(x) &#x3D; 0,\lim_{x \to a}g(x) &#x3D; 0$2. $f’(x),g’(x)$存在,且$g’(x) \ne 0$3. $\lim_{x \to a}\frac{f’(x)}{g’(x)}&#x3D;K$则有$$\lim_{x \to a}\frac{f(x)}{g(x)}&#x3D; \lim_{x \to a}\frac{f’(x)}{g’(x)} &#x3D; K$$### 导数的应用#### 曲线的渐进线1. 铅直渐进线:当$x$从单侧趋于$x_0$时,$f(x)$趋于$+\infty$或$-\infty$,则直线$x&#x3D;x_0$是曲线的渐近线2. 水平渐近线:,当$x$趋于$+\infty$或$-\infty$,$f(x)$趋于$c$,则直线$y&#x3D;c$是曲线的渐进线3. 斜渐近线:曲线有渐进线$y&#x3D;ax+b(a \ne 0)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.</span> <span class="toc-text">一元函数积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.1.</span> <span class="toc-text">不定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E6%B1%82%E6%B3%95"><span class="toc-number">1.5.2.</span> <span class="toc-text">不定积分求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.3.</span> <span class="toc-text">定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.</span> <span class="toc-text">定积分定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">积分中值定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%87%BD%E6%95%B0%E5%AD%98%E5%9C%A8%E5%AE%9A%E7%90%86-%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">原函数存在定理(微积分学第一基本定理)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF-%E8%8E%B1%E5%B8%83%E5%B0%BC%E5%85%B9%E5%85%AC%E5%BC%8F-%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">牛顿-莱布尼兹公式(微积分学第二基本定理)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E6%B1%82%E6%B3%95"><span class="toc-number">1.5.5.</span> <span class="toc-text">定积分求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E5%BA%94%E7%94%A8"><span class="toc-number">1.5.6.</span> <span class="toc-text">定积分应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">好题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">1.7.</span> <span class="toc-text">题解</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep rotate"></span>
+      likeclouders
+    </div>
+    
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        18.8k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:10
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">微积分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%94%9F%E5%AF%BC%E5%B8%88%E6%9D%8E%E5%86%9B"><span class="toc-number">1.1.</span> <span class="toc-text">人生导师李军</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E9%99%90"><span class="toc-number">1.2.</span> <span class="toc-text">极限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E9%99%90%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">极限语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#varepsilon-N-%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">$\varepsilon -N$语言</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-%E8%AE%BE%E6%9C%89%E6%95%B0%E5%88%97-x-n-%E8%8B%A5%E5%AD%98%E5%9C%A8A-in-R-%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F%E7%9A%84-varepsilon-0-%E5%AD%98%E5%9C%A8-N-0-in-N-%E4%BD%BF%E5%BE%97%E5%BD%93-n-N-0-%E6%97%B6-%E6%81%92%E6%9C%89-x-n-A-G-%E5%88%99%E7%A7%B0%E6%95%B0%E5%88%97-x-n-%E7%9A%84%E6%9E%81%E9%99%90%E4%B8%BA-infty-%E8%AE%B0%E4%B8%BA-lim-n-to-infty-x-n-infty-varepsilon-delta-%E8%AF%AD%E8%A8%80%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E5%9C%A8-%EF%BC%9Fx-0-%E7%9A%84%E6%9F%90%E4%B8%AA%E5%8E%BB%E5%BF%83%E9%82%BB%E5%9F%9F%E5%86%85%E6%9C%89%E5%AE%9A%E4%B9%89-%E8%8B%A5%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F%E7%9A%84-varepsilon-0-%E5%AD%98%E5%9C%A8-delta-0-%E4%BD%BF%E5%BE%97%E5%BD%93-00-%E4%BD%BF%E5%BE%97%E5%BD%93-0-%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F-%E8%8B%A5-lim-alpha-0-%E5%88%99%E7%A7%B0-alpha-%E6%98%AF%E8%BF%99%E4%B8%80%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F-%E6%8C%87%E5%AF%B9%E8%BD%AC%E6%8D%A2%E4%BC%BC%E4%B9%8E%E5%BE%88%E5%A5%BD%E7%94%A8%F0%9F%A4%94"><span class="toc-number">1.3.</span> <span class="toc-text">定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&gt;0$,存在$N_0\in N$,使得当$n&gt;N_0$时,恒有$$|x_n-A|&lt;\varepsilon$$则称数列{$x_n$}以A为极限,也称{$x_n$}收敛于A,记为$$\lim_{x \to n}x_n&#x3D;A$$应用:求数列极限时方法:放缩$|x_n-A| &lt;f(n)&lt;\varepsilon$  解出n#### $ G -N$语言定义:设有数列${x_n}$,若对于任意的$G&gt;0$,存在$N_0 \in N$,使得当$n&gt;N_0$时,恒有$$x_n&gt;G$$则称数列${x_n}$的极限为$+ \infty$,记为$$\lim_{n \to + \infty}x_n&#x3D;+ \infty$$#### $\varepsilon - \delta$语言设函数$f(x)$在$？x_0$的某个去心邻域内有定义,若对于任意的$\varepsilon &gt;0$存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$A$,记为$$\lim_{x \to x_0}f(x)&#x3D;A$$#### $\varepsilon -  K$语言设函数$f(x)$在$(a,+\infty)$上有定义,若对于任意的$\varepsilon &gt;0$,存在$K \in R$,当$x&gt;K$时,恒有:$$|f(x)-A|&lt;\varepsilon$$则称,$x$趋近于$+\infty$时,$f(x)$的极限为$A$,记为$$\lim_{x \to +\infty}f(x)&#x3D;A$$#### $G-\delta$语言设函数$f(x)$在$x_0$的某个去心邻域内有定义,若对于任意的$G&gt;0$,存在$\delta &gt;0$,使得当$0&lt;|x-x_0|&lt;\delta$时,都有$$f(x)&gt;G$$则称,$x$趋近于$x_0$时,$f(x)$的极限为$+\infty$,记为$$\lim_{x \to +x_0}f(x)&#x3D;+\infty$$### 极限求法#### 等价无穷小&gt; 无穷小量:若$\lim \alpha &#x3D; 0$,则称$\alpha$是这一过程中的一个无穷小量&gt; 指对转换似乎很好用🤔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lim-x-0-%E6%97%B6-x-sim-sin-x-sim-arcsin-x-sim-arctan-x-1-cos-x-sim-frac-1-2-x-2-ln-x-sim-x-1-e-x-sim-x-1-a-x-1-sim-x-ln-a-1-x-alpha-sim-1-alpha-x-%E6%9E%81%E9%99%90%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E8%AE%BE-lim-X-A-lim-Y-B-%E5%88%99%E6%9C%89-lim-X-pm-Y-lim-X-pm-lim-Y-A-pm-B-lim-X-cdot-Y-lim-X-cdot-lim-Y-A-cdot-B-lim-frac-X-Y-frac-lim-X-lim-Y-frac-A-B-%E5%A4%B9%E9%80%BC%E5%87%86%E5%88%99%E8%AE%BE%E5%9C%A8%E6%9F%90%E6%9E%81%E9%99%90%E8%BF%87%E7%A8%8B%E4%B8%AD-X-le-Y-le-Z-%E4%B8%94-lim-X-lim-Z-A-%E5%88%99-lim-Y-A-%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%87%86%E5%88%99%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E7%9A%84%E6%95%B0%E5%88%97%E5%BF%85%E6%94%B6%E6%95%9B%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E7%9A%84%E5%87%BD%E6%95%B0%E5%BF%85%E6%9C%89%E6%9E%81%E9%99%90-%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90-lim-x-to-0-frac-sin-x-x-1-%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%9E%81%E9%99%90-lim-x-to-infty-1-frac-1-x-x-e-%E6%B4%9B%E5%BF%85%E8%BE%BE%E6%B3%95%E5%88%99-%E5%AF%BC%E6%95%B0-%E5%85%AC%E5%BC%8F-%E8%8E%B1%E5%B8%83%E5%B0%BC%E5%85%B9%E5%85%AC%E5%BC%8F%E8%8B%A5%E5%87%BD%E6%95%B0-u-x-v-x-%E9%83%BD%E6%9C%89-n-%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99%E4%BB%96%E4%BB%AC%E7%9A%84%E4%B9%98%E7%A7%AF-u-x-v-x-%E4%B9%9F%E6%9C%89-n-%E9%98%B6%E5%AF%BC%E6%95%B0-uv-n-sum-k-0-n-C-n-k-u-n-k-v-k-%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F1-%E7%9A%AE%E4%BA%9A%E8%AF%BA%E4%BD%99%E9%A1%B9%E5%9E%8B%E8%AE%BE-f-x-%E5%9C%A8%E5%90%AB%E6%9C%89-x-0-%E7%9A%84%E9%82%BB%E5%9F%9F%E5%86%85%E6%9C%89%E7%9B%B4%E5%88%B0n%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99%E5%BD%93-x-longrightarrow-x-0-%E6%97%B6-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-o-x-x-0-n-2-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%BD%99%E9%A1%B9%E5%9E%8B%E8%AE%BE-f-x-%E5%9C%A8%E5%90%AB%E6%9C%89-x-0-%E7%9A%84%E9%82%BB%E5%9F%9FU%E5%86%85%E6%9C%89%E7%9B%B4%E5%88%B0n-1%E9%98%B6%E5%AF%BC%E6%95%B0-%E5%88%99-f-%E5%9C%A8U%E5%86%85%E7%9A%84%E4%BB%BB%E6%84%8F%E7%82%B9-x-%E6%88%90%E7%AB%8B-f-x-sum-k-0-n-frac-f-k-x-0-k-x-x-0-k-frac-f-n-1-xi-n-1-x-x-0-n-1-%E8%B4%B9%E9%A9%AC%E5%BC%95%E7%90%86%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E5%9C%A8%E7%82%B9-x-0-%E6%9F%90%E4%B8%AA%E9%82%BB%E5%9F%9F-U-%E5%86%85%E6%9C%89%E5%AE%9A%E4%B9%89-%E4%B8%94%E5%9C%A8-x-0-%E5%8F%AF%E5%AF%BC-%E5%A6%82%E6%9E%9C%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F-x-in-U-%E6%9C%89-f-x-le-f-x-0-or-f-x-ge-f-x-0-%E5%88%99-f%E2%80%99-x-0-0-%E6%B4%9B%E5%B0%94%E5%AE%9A%E7%90%86%E8%AE%BE-f-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC3-f-a-f-b-%E5%88%99%E5%9C%A8-a-b-%E5%86%85%E8%87%B3%E5%B0%91%E6%9C%89%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-f%E2%80%99-xi-0-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%AE%9A%E7%90%86%E8%8B%A5%E5%87%BD%E6%95%B0-f-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC%E5%88%99%E5%9C%A8-a-b-%E5%86%85%E8%87%B3%E5%B0%91%E5%AD%98%E5%9C%A8%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-f%E2%80%99-xi-frac-f-a-f-b-b-a-%E6%9F%AF%E8%A5%BF%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E8%8B%A5%E5%87%BD%E6%95%B0-f-x-%E5%92%8C-g-x-%E6%BB%A1%E8%B6%B3%E6%9D%A1%E4%BB%B6-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD2-%E5%9C%A8-a-b-%E4%B8%8A%E5%8F%AF%E5%AF%BC3-%E5%9C%A8-a-b-%E5%86%85-g%E2%80%99-x-%E5%A4%84%E5%A4%84%E4%B8%8D%E4%B8%BA%E9%9B%B6%E5%88%99%E5%9C%A8-a-b-%E4%B8%AD%E8%87%B3%E5%B0%91%E6%9C%89%E4%B8%80%E7%82%B9-xi-%E4%BD%BF%E5%BE%97-frac-f-a-f-b-g-a-g-b-frac-f%E2%80%99-xi-g%E2%80%99-xi-%E6%B4%9B%E5%BF%85%E8%BE%BE%E6%B3%95%E5%88%99%E8%AE%BE%E5%87%BD%E6%95%B0-f-x-%E4%B8%8E%E5%87%BD%E6%95%B0-g-x-%E6%BB%A1%E8%B6%B3%E4%B8%8B%E5%88%97%E6%9D%A1%E4%BB%B61-lim-x-to-a-f-x-0-lim-x-to-a-g-x-0-2-f%E2%80%99-x-g%E2%80%99-x-%E5%AD%98%E5%9C%A8-%E4%B8%94-g%E2%80%99-x-ne-0-3-lim-x-to-a-frac-f%E2%80%99-x-g%E2%80%99-x-K-%E5%88%99%E6%9C%89-lim-x-to-a-frac-f-x-g-x-lim-x-to-a-frac-f%E2%80%99-x-g%E2%80%99-x-K-%E5%AF%BC%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8-%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%9B%E7%BA%BF1-%E9%93%85%E7%9B%B4%E6%B8%90%E8%BF%9B%E7%BA%BF-%E5%BD%93-x-%E4%BB%8E%E5%8D%95%E4%BE%A7%E8%B6%8B%E4%BA%8E-x-0-%E6%97%B6-f-x-%E8%B6%8B%E4%BA%8E-infty-%E6%88%96-infty-%E5%88%99%E7%9B%B4%E7%BA%BF-x-x-0-%E6%98%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%91%E7%BA%BF2-%E6%B0%B4%E5%B9%B3%E6%B8%90%E8%BF%91%E7%BA%BF-%E5%BD%93-x-%E8%B6%8B%E4%BA%8E-infty-%E6%88%96-infty-f-x-%E8%B6%8B%E4%BA%8E-c-%E5%88%99%E7%9B%B4%E7%BA%BF-y-c-%E6%98%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%B8%90%E8%BF%9B%E7%BA%BF3-%E6%96%9C%E6%B8%90%E8%BF%91%E7%BA%BF-%E6%9B%B2%E7%BA%BF%E6%9C%89%E6%B8%90%E8%BF%9B%E7%BA%BF-y-ax-b-a-ne-0"><span class="toc-number">1.4.</span> <span class="toc-text">$\lim x &#x3D; 0$ 时$$x \sim  \sin x \sim \arcsin x \sim \arctan x$$$$1-\cos x \sim \frac{1}{2}x^{2}$$$$\ln_{}{x} \sim x-1,e^{x}\sim x+1$$$$a^{x}-1\sim\ x ln_{}{a}$$$$(1+x)^{\alpha} \sim 1+\alpha x$$#### 极限的四则运算设$\lim X &#x3D; A,\lim Y &#x3D; B$,则有$$\lim(X \pm Y) &#x3D; \lim X \pm \lim Y &#x3D; A \pm B$$$$\lim(X \cdot Y)&#x3D;\lim X \cdot \lim Y &#x3D; A \cdot B$$$$\lim \frac{X}{Y} &#x3D; \frac{\lim X}{\lim Y} &#x3D; \frac{A}{B}$$#### 夹逼准则设在某极限过程中$X \le Y \le Z$,且$\lim X &#x3D; \lim Z &#x3D; A$,则$\lim Y &#x3D; A$#### 单调有界准则单调有界的数列必收敛单调有界的函数必有极限#### 基本极限第一个基本极限$$\lim_{x \to 0}\frac{\sin x}{x} &#x3D; 1$$第二个基本极限$$\lim_{x \to \infty }(1+\frac{1}{x})^{x}&#x3D;e$$#### 洛必达法则## 导数### 公式#### 莱布尼兹公式若函数$u(x),v(x)$都有$n$阶导数,则他们的乘积$u(x)v(x)$也有$n$阶导数$$(uv)^{(n)}&#x3D;\sum_{k&#x3D;0}^{n}C_{n}^{k}u^{(n-k)}v^{(k)}$$#### 泰勒公式1. 皮亚诺余项型设$f(x)$在含有$x_0$的邻域内有直到n阶导数,则当$x \longrightarrow x_0$时$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+o((x-x_0)^{n})$$2. 拉格朗日余项型设$f(x)$在含有$x_0$的邻域U内有直到n+1阶导数,则$f$在U内的任意点$x$成立$$f(x)&#x3D;\sum_{k&#x3D;0}^{n} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^{k}+\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}$$#### 费马引理设函数$f(x)$在点$x_0$某个邻域$U$内有定义,且在$x_0$可导,如果对于任意$x \in U$,有$$f(x) \le f(x_0)(or f(x)\ge f(x_0))$$则$f’(x_0)&#x3D;0$#### 洛尔定理设$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. $f(a)&#x3D;f(b)$则在$(a,b)$内至少有一点$\xi$,使得$$f’(\xi)&#x3D;0$$#### 拉格朗日定理若函数$f(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导则在$(a,b)$内至少存在一点$\xi$,使得$$f’(\xi)&#x3D;\frac{f(a)-f(b)}{b-a}$$#### 柯西中值定理若函数$f(x)$和$g(x)$满足条件:1. 在$[a,b]$上连续2. 在$(a,b)$上可导3. 在$(a,b)$内$g’(x)$处处不为零则在$(a,b)$中至少有一点$\xi$使得$$\frac{f(a)-f(b)}{g(a)-g(b)}&#x3D;\frac{f’(\xi)}{g’(\xi)}$$#### 洛必达法则设函数$f(x)$与函数$g(x)$满足下列条件1. $\lim_{x \to a}f(x) &#x3D; 0,\lim_{x \to a}g(x) &#x3D; 0$2. $f’(x),g’(x)$存在,且$g’(x) \ne 0$3. $\lim_{x \to a}\frac{f’(x)}{g’(x)}&#x3D;K$则有$$\lim_{x \to a}\frac{f(x)}{g(x)}&#x3D; \lim_{x \to a}\frac{f’(x)}{g’(x)} &#x3D; K$$### 导数的应用#### 曲线的渐进线1. 铅直渐进线:当$x$从单侧趋于$x_0$时,$f(x)$趋于$+\infty$或$-\infty$,则直线$x&#x3D;x_0$是曲线的渐近线2. 水平渐近线:,当$x$趋于$+\infty$或$-\infty$,$f(x)$趋于$c$,则直线$y&#x3D;c$是曲线的渐进线3. 斜渐近线:曲线有渐进线$y&#x3D;ax+b(a \ne 0)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.</span> <span class="toc-text">一元函数积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.1.</span> <span class="toc-text">不定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E6%B1%82%E6%B3%95"><span class="toc-number">1.5.2.</span> <span class="toc-text">不定积分求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">1.5.3.</span> <span class="toc-text">定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.</span> <span class="toc-text">定积分定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">积分中值定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%87%BD%E6%95%B0%E5%AD%98%E5%9C%A8%E5%AE%9A%E7%90%86-%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">原函数存在定理(微积分学第一基本定理)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF-%E8%8E%B1%E5%B8%83%E5%B0%BC%E5%85%B9%E5%85%AC%E5%BC%8F-%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">牛顿-莱布尼兹公式(微积分学第二基本定理)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E6%B1%82%E6%B3%95"><span class="toc-number">1.5.5.</span> <span class="toc-text">定积分求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E5%BA%94%E7%94%A8"><span class="toc-number">1.5.6.</span> <span class="toc-text">定积分应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">好题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">1.7.</span> <span class="toc-text">题解</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+  </body>
+  </html>
+

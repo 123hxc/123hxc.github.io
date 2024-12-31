@@ -1,0 +1,1254 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_tq6stt6tcg';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
+  
+  <title>
+    CPL |
+    
+    likeclouders的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="[TOC] CPLIDEIntegrated Development Environment(集成开发环境)集代码编辑器、编译器、调试器和图形用户界面等为一体的开发环境 loop组成控制表达式+循环体 while语句1while(表达式)&#123;语句&#125;  先判定表达式,再执行循环体  do语句1do&#123;语句&#125;while(表达式)  一定会先执行一次  for语句1f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPL">
+<meta property="og:url" content="http://example.com/2024/12/31/CPL/index.html">
+<meta property="og:site_name" content="likeclouders的博客">
+<meta property="og:description" content="[TOC] CPLIDEIntegrated Development Environment(集成开发环境)集代码编辑器、编译器、调试器和图形用户界面等为一体的开发环境 loop组成控制表达式+循环体 while语句1while(表达式)&#123;语句&#125;  先判定表达式,再执行循环体  do语句1do&#123;语句&#125;while(表达式)  一定会先执行一次  for语句1f">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\hxc\AppData\Roaming\Typora\typora-user-images\image-20240205115810379.png">
+<meta property="article:published_time" content="2024-12-31T00:06:23.000Z">
+<meta property="article:modified_time" content="2024-12-31T00:06:51.725Z">
+<meta property="article:author" content="likeclouders">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\hxc\AppData\Roaming\Typora\typora-user-images\image-20240205115810379.png">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="likeclouders的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">Home</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">About</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">Friend</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="CPL">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">CPL</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-CPL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/2024/12/31/CPL/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-12-31T00:06:23.000Z" itemprop="datePublished">2024-12-31</time>
+    <time style="display: none;" id="post-update-time">2024-12-31</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <p>[TOC]</p>
+<h1 id="CPL"><a href="#CPL" class="headerlink" title="CPL"></a>CPL</h1><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><p>Integrated Development Environment(集成开发环境)<br><strong>集代码编辑器、编译器、调试器和图形用户界面等为一体的开发环境</strong></p>
+<h2 id="loop"><a href="#loop" class="headerlink" title="loop"></a>loop</h2><h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>控制表达式+循环体</p>
+<h3 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a><code>while</code>语句</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(表达式)&#123;语句&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>先判定表达式,再执行循环体</p>
+</blockquote>
+<h3 id="do语句"><a href="#do语句" class="headerlink" title="do语句"></a><code>do</code>语句</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;语句&#125;<span class="keyword">while</span>(表达式)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>一定会先执行一次</p>
+</blockquote>
+<h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a><code>for</code>语句</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(声明或表达式;表达式;表达式)&#123;语句&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以有多个声明<br>语句可以为空(简洁)</p>
+</blockquote>
+<h3 id="循环的退出"><a href="#循环的退出" class="headerlink" title="循环的退出"></a>循环的退出</h3><h4 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a><code>break</code>语句</h4><p>跳出<code>switch</code>语句和一层循环</p>
+<h4 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a><code>continue</code>语句</h4><p>跳过本次循环体中剩下尚未执行的语句，立即进行下一次的循环条件判定</p>
+<h4 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a><code>goto</code>语句</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">标识符 : 语句</span><br><span class="line"><span class="keyword">goto</span> 标识符</span><br></pre></td></tr></table></figure>
+<h2 id="basic-type"><a href="#basic-type" class="headerlink" title="basic type"></a>basic type</h2><h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><ul>
+<li><code>int</code>型(有符号)</li>
+<li><code>unsighed int</code>型(无符号)</li>
+<li><code>long long int</code>型(长)</li>
+</ul>
+<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><ul>
+<li><code>float</code>型(单精度)</li>
+<li><code>double</code>型(双精度)</li>
+<li><code>long double</code>型(扩展)<blockquote>
+<p>读取<code>double</code>使用<code>%lf</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h3><p><code>char</code>型(本质上是<code>int</code>)</p>
+<h3 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h3><p>由反斜杠 <code>\</code> 后接字母或数字组合构成的字符组合</p>
+<table>
+<thead>
+<tr>
+<th>转义序列</th>
+<th>表示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\a</td>
+<td>响铃（警报）</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>回退</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表符</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符</td>
+</tr>
+<tr>
+<td>\‘</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\“</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>?</td>
+<td>文本问号</td>
+</tr>
+<tr>
+<td>\ooo</td>
+<td>八进制表示法的 ASCII 字符</td>
+</tr>
+<tr>
+<td>\x hh</td>
+<td>十六进制表示法的 ASCII 字符</td>
+</tr>
+<tr>
+<td>\x hhhh</td>
+<td>十六进制表示法的 Unicode 字符（如果此转义序列用于宽字符常量或 Unicode 字符串文本）。</td>
+</tr>
+</tbody></table>
+<h3 id="字符处理函数"><a href="#字符处理函数" class="headerlink" title="字符处理函数"></a>字符处理函数</h3><ul>
+<li><code>toupper</code>函数(转大写)</li>
+<li><code>scanf</code>函数读入字符</li>
+<li><code>printf</code>函数输出字符</li>
+<li><code>getchar</code>函数读入字符<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>((ch=getchar())!=<span class="string">&#x27;\n&#x27;</span>)&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>putchar</code>函数输出字符</li>
+</ul>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><ul>
+<li>隐式转换</li>
+<li>显示转换<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(类型名)表达式</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="类型定义和大小"><a href="#类型定义和大小" class="headerlink" title="类型定义和大小"></a>类型定义和大小</h3><p><code>typedef 类型名 name</code><br><code>sizeof(类型名)</code>字节数</p>
+<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>标量:保存单一数据<br>聚合变量:储存成组的数据(如数组和结构体)</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>含有多个数据值的数据结构</p>
+<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> A[<span class="number">10</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> length = <span class="keyword">sizeof</span>(A)/<span class="keyword">sizeof</span>(A[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> A[<span class="number">10</span>][<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><p><em>optimization hinder evolution</em></p>
+<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p><em><strong>pass by value</strong></em></p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">返回类型 函数名(首字母大写) (形式参数)</span><br><span class="line">&#123;复合语句</span><br><span class="line"><span class="keyword">return</span> x;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><p><em>递归函数最重要的是他的意义</em></p>
+<h2 id="program-structure"><a href="#program-structure" class="headerlink" title="program structure"></a>program structure</h2><h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>在函数体内声明的变量称为该函数的局部变量</p>
+<ul>
+<li>自动储存期</li>
+<li>块作用域<blockquote>
+<p>在局部变量声明中放置单词<code>static</code>可使变量具有静态储存期</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="外部变量-全局变量"><a href="#外部变量-全局变量" class="headerlink" title="外部变量(全局变量)"></a>外部变量(全局变量)</h3><ul>
+<li>静态储存期</li>
+<li>文件作用域</li>
+</ul>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p><em><strong>规则:当程序块内的声明命名一个标识符时,如果此标识符已经是<a href="%E6%AD%A4%E6%A0%87%E8%AF%86%E7%AC%A6%E6%8B%A5%E6%9C%89%E6%96%87%E4%BB%B6%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%88%96%E5%B7%B2%E5%9C%A8%E6%9F%90%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%9D%97%E5%86%85%E5%A3%B0%E6%98%8E">^可见</a>的了,新的声明临时覆盖了旧的声明,标识符获得了新的含义,在程序块的末尾,标识符重新获得旧的含义</strong></em></p>
+<h3 id="构建c程序"><a href="#构建c程序" class="headerlink" title="构建c程序"></a>构建c程序</h3><ul>
+<li>预处理指令</li>
+<li>类型定义</li>
+<li>外部变量声明</li>
+<li>其他函数声明</li>
+<li><code>main</code>函数定义</li>
+<li>其他函数定义</li>
+</ul>
+<h2 id="pointer"><a href="#pointer" class="headerlink" title="pointer"></a>pointer</h2><h3 id="pointer-and-arrays"><a href="#pointer-and-arrays" class="headerlink" title="pointer and arrays"></a>pointer and arrays</h3><h4 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h4><p><strong>我们这&#x3D;&#x3D;捷克&#x3D;&#x3D;就将五句话–ant</strong></p>
+<ol>
+<li><em><strong>A variable has type,value,address</strong></em></li>
+<li>A variable can be used as lvalue(space)<a href="%E5%B7%A6%E5%80%BC">^1</a> and rvalue(value)<a href="%E5%8F%B3%E5%80%BC">^2</a></li>
+<li>Pointer is a <strong>variable</strong> that contains the address of a variable</li>
+<li>In expressions,<strong>the name of an array</strong> is a synonym of the address of the first element of the array<a href="%E9%A6%96%E5%9C%B0%E5%9D%80">^3</a></li>
+<li>But an array name is &#x3D;&#x3D;not&#x3D;&#x3D; a variable</li>
+</ol>
+<hr>
+<h4 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h4><table>
+<thead>
+<tr>
+<th align="left">character</th>
+<th><code>*</code></th>
+<th><code>&amp;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">name</td>
+<td>dereference</td>
+<td>address</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h4><table>
+<thead>
+<tr>
+<th align="left">memory</th>
+<th>heap(not fixed)</th>
+<th>stack(fixed)</th>
+<th>static&#x2F;global(fixed)</th>
+<th>code&#x2F;text(fixed)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">function</td>
+<td></td>
+<td>local variable,functions</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h4><ul>
+<li>arr[i] &lt;&#x3D;&gt; *(arr + i) &lt;&#x3D;&gt; *(i + arr) &lt;&#x3D;&gt; i[arr]</li>
+<li>*arr &#x3D; arr[]</li>
+<li>&amp;(*(arr + i)) &lt;&#x3D;&gt; arr + i &lt;&#x3D;&gt; &amp;(arr[i])<blockquote>
+<p>it is right because it is a Syntactic sugar<a href="%E8%AF%AD%E6%B3%95%E7%B3%96">^4</a></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="malloc函数"><a href="#malloc函数" class="headerlink" title="malloc函数"></a><code>malloc</code>函数</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *numbers = <span class="built_in">malloc</span>( len * <span class="keyword">sizeof</span>(*numbers) ); </span><br><span class="line"><span class="keyword">if</span>(numbers == <span class="literal">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">free</span>(numbers);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>relieve the space of the heap</p>
+</blockquote>
+<h4 id="两种0"><a href="#两种0" class="headerlink" title="两种0"></a>两种<code>0</code></h4><blockquote>
+<p>NULL &#x3D; (void*) 0<br>‘\0’ &#x3D; 0</p>
+</blockquote>
+<h3 id="pointer-and-C-strings"><a href="#pointer-and-C-strings" class="headerlink" title="pointer and C strings"></a>pointer and C strings</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> <span class="title function_">StrLenStd</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *sc;</span><br><span class="line"><span class="keyword">for</span>(sc = str;*str != <span class="string">&#x27;\0&#x27;</span>;str++);</span><br><span class="line"><span class="keyword">return</span> str-sc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *<span class="title function_">StrCpyStd</span><span class="params">(<span class="type">char</span> *dest, <span class="type">const</span> <span class="type">char</span> *src)</span>&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">char</span> *s = dest;(*s++ = *src++) != <span class="string">&#x27;\0&#x27;</span>;);</span><br><span class="line"><span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">StrCmpStd</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *s1,<span class="type">const</span> <span class="type">char</span> *s2)</span>&#123;</span><br><span class="line"><span class="keyword">for</span>(;*s1==*s2;s1++,s2++)&#123;</span><br><span class="line"><span class="keyword">if</span>(*si==<span class="string">&#x27;\0&#x27;</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> (*(<span class="type">const</span> unsighed <span class="type">char</span> *) s1)&lt;(*(<span class="type">const</span> unsighed <span class="type">char</span>*) s2)?<span class="number">-1</span>:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>遇到情境进行分析,分类讨论</strong></p>
+<h3 id="double-pointers"><a href="#double-pointers" class="headerlink" title="double pointers"></a>double pointers</h3><h4 id="pointer-array-指针数组"><a href="#pointer-array-指针数组" class="headerlink" title="pointer array(指针数组)"></a>pointer array(<strong>指针数组</strong>)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *p[]</span><br><span class="line"><span class="type">void</span> <span class="title function_">Swap</span><span class="params">(<span class="type">char</span> **left,<span class="type">char</span> **right)</span>&#123;</span><br><span class="line"><span class="type">char</span> *temp = *left;</span><br><span class="line">*left = *right;</span><br><span class="line">*right = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>先解读<code> p[]</code>,数组,里面的每一个元素是一个<code>char *</code>指针,指针指向的是<code>char</code><br><code>p</code>的类型<code>char **</code><br>👉<strong>类型很重要</strong></p>
+</blockquote>
+<h4 id="pointer-and-2D-array-数组指针"><a href="#pointer-and-2D-array-数组指针" class="headerlink" title="pointer and 2D array(数组指针)"></a>pointer and 2D array(<strong>数组指针</strong>)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> (*table)[col];</span><br><span class="line">table[i][j][k] = *(*(*(table+i)+j)+k)</span><br><span class="line">*(table+i) &lt;=&gt; table[i] table[i]是一个元素(数组名) &lt;=&gt; arr[i] 的 arr &lt;=&gt; 首地址 &lt;=&gt; <span class="type">int</span> *</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>table是一个指针,指向大小为col的int数组</p>
+</blockquote>
+<hr>
+<h3 id="function-pointers"><a href="#function-pointers" class="headerlink" title="function pointers"></a>function pointers</h3><p><strong>functions are first class citizens</strong></p>
+<blockquote>
+<p>first class citizen:variable &#x3D;&#x3D;great power&#x3D;&#x3D;🫨</p>
+<blockquote>
+<p>argument,return val,assignment,in array 把函数当成变量来用,可以做这四件事</p>
+</blockquote>
+</blockquote>
+<h4 id="argument-6"><a href="#argument-6" class="headerlink" title="argument^6"></a>argument<a href="%E5%8F%82%E6%95%B0,%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">^6</a></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> <span class="title function_">Integration</span><span class="params">(<span class="type">double</span> low,<span class="type">double</span> high,<span class="type">double</span> (*func)(<span class="type">double</span>))</span>&#123;</span><br><span class="line"><span class="type">double</span> sum = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; num;i++)&#123;</span><br><span class="line"><span class="type">double</span> interval = (high - low)/num;</span><br><span class="line"><span class="type">double</span> xi = low + interval*i;</span><br><span class="line"><span class="type">double</span> yi = func(i);</span><br><span class="line">sum+= yi;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>  sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">double</span> integrate = Integration(<span class="number">0.0</span>,<span class="number">1.0</span>,<span class="built_in">sin</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>func 是一个&#x3D;&#x3D;指针&#x3D;&#x3D;,指向一个函数,这个函数接受一个double,返回一个double</p>
+</blockquote>
+<h4 id="qsort"><a href="#qsort" class="headerlink" title="qsort"></a>qsort</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">qsort</span><span class="params">(<span class="type">void</span> *ptr,<span class="type">int</span> count,<span class="type">int</span> size,<span class="type">int</span> (*comp)(<span class="type">const</span> <span class="type">void</span>*,<span class="type">const</span> <span class="type">void</span>*))</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">CompareInt</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* left,<span class="type">const</span> <span class="type">void</span>*right)</span>&#123;</span><br><span class="line">  <span class="type">int</span> left_ = *(<span class="type">const</span> <span class="type">int</span> *)left;</span><br><span class="line">  <span class="type">int</span> right_ = *(<span class="type">const</span> <span class="type">int</span> *)right;</span><br><span class="line">  <span class="keyword">return</span> (left_&gt;right_) - (left_&lt;right_);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="type">int</span> arr[]=&#123;<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  qsort(arr,<span class="keyword">sizeof</span> arr/<span class="keyword">sizeof</span> arr[<span class="number">0</span>],<span class="keyword">sizeof</span> arr[<span class="number">0</span>],CompareInt);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">CompareStr</span><span class="params">(<span class="type">const</span> <span class="type">void</span>*left,<span class="type">const</span> <span class="type">void</span>*right)</span>&#123;</span><br><span class="line">  <span class="type">char</span> *<span class="type">const</span>*left_=left;</span><br><span class="line">  <span class="type">char</span> *<span class="type">const</span>*right_=right;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">strcmp</span>(*left_,*right_);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="type">char</span> *names[]=&#123;<span class="string">&quot;zhang boju&quot;</span>,<span class="string">&quot;zhang bojun&quot;</span>,<span class="string">&quot;pan su&quot;</span>,<span class="string">&quot;zuo liang&quot;</span>&#125;;</span><br><span class="line">  qsort(names,<span class="keyword">sizeof</span> names/<span class="keyword">sizeof</span> *names,<span class="keyword">sizeof</span> *names,CompareStr);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,names[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>left是<code>char**</code>类型,<code>const void *</code>被比较元素的地址,如果是字符串,元素为首地址<code>char*</code>类型,地址为<code>char**</code></p>
+</blockquote>
+<h4 id="return-values"><a href="#return-values" class="headerlink" title="return values"></a>return values</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> (*GetCompareFunction(<span class="type">bool</span> case_insensitive))(<span class="type">const</span> <span class="type">void</span> *,<span class="type">const</span> <span class="type">void</span> *)&#123;</span><br><span class="line">    <span class="keyword">return</span> case_insensitive?&amp;CompareInt:CompareStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>GetCompareFunction</code>是一个函数,接受一个<code>bool</code>变量,返回一个指针,指向一个函数,这个函数接受两个空指针,返回一个int</p>
+</blockquote>
+<h4 id="assignment"><a href="#assignment" class="headerlink" title="assignment"></a>assignment</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>(*comp)(<span class="type">const</span> <span class="type">void</span>*,<span class="type">const</span> <span class="type">void</span>*) = CompareStr;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>左边定义了comp(名字+类型),右边进行了初始化,将函数指针赋值给comp</p>
+</blockquote>
+<hr>
+<p><em>还可以这样✍</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="title function_">int</span><span class="params">(*comparefunction)</span><span class="params">(<span class="type">const</span> <span class="type">void</span>*,<span class="type">const</span> <span class="type">void</span>*)</span>;</span><br><span class="line">comparefunction comp = CompareStr;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用类型别名,像用int,char一样用就行了</p>
+</blockquote>
+<hr>
+<h4 id="in-array"><a href="#in-array" class="headerlink" title="in array"></a>in array</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double(*funcs[])(double)=&#123;sin,cos,square&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>funcs是一个数组,<strong>这些数组</strong>里存放着指针,<strong>这些指针</strong>指向函数,<strong>这些函数</strong>接受double返回double</p>
+</blockquote>
+<hr>
+<h4 id="decl"><a href="#decl" class="headerlink" title="decl"></a>decl</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> **argv;</span><br><span class="line"><span class="type">int</span> *names[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> (*muscian)[<span class="number">10</span>];</span><br><span class="line"><span class="type">char</span> *<span class="title function_">StrCpyStd</span><span class="params">(<span class="type">char</span> *dest,<span class="type">const</span> <span class="type">char</span> *src)</span>;</span><br><span class="line"><span class="type">int</span> (*comp)(<span class="type">const</span> <span class="type">void</span> *left,<span class="type">const</span> <span class="type">void</span> *right);</span><br><span class="line"><span class="type">int</span> <span class="title function_">atexit</span><span class="params">(<span class="type">void</span> (*func)(<span class="type">void</span>))</span>;</span><br><span class="line"><span class="type">void</span> (*signal(<span class="type">int</span> sig,<span class="type">void</span>(*handler)(<span class="type">int</span>)))(<span class="type">int</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4<code>StrCpyStd</code>是一个函数,接受两个<code>char*</code>,返回一个<code>char*</code></p>
+<p>5<code>comp</code>是一个指针,指向一个函数,这个函数接受两个<code>const void*</code>,返回一个<code>int</code></p>
+<p>7<code>signal</code>是一个函数,接受两个参数哦,一个参数是<code>int</code>,令一个参数是一个指针,这个指针指向一个函数,这个函数接受<code>int</code>,返回<code>void</code>,<code>signal</code>返回一个指针,这个指针指向一个函数,这个函数接受<code>int</code>,返回<code>void</code></p>
+</blockquote>
+<hr>
+<h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><h3 id="struct-1"><a href="#struct-1" class="headerlink" title="struct"></a>struct</h3><h4 id="difinition"><a href="#difinition" class="headerlink" title="difinition"></a>difinition</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">musician</span>&#123;</span></span><br><span class="line"><span class="type">char</span> * name;</span><br><span class="line"><span class="type">char</span> gender;</span><br><span class="line"><span class="type">char</span> *album;</span><br><span class="line"><span class="type">int</span> c_score;</span><br><span class="line"><span class="type">int</span> java_score;</span><br><span class="line"><span class="type">int</span> python_score;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">musician</span>&#123;</span>    </span><br><span class="line">&#125;Musician;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">musician</span> <span class="title">luo</span> =</span>&#123;</span><br><span class="line">.name =<span class="string">&quot;luo Dayou&quot;</span>,</span><br><span class="line"><span class="string">&#x27;M&#x27;</span>,<span class="string">&quot;ZhiHuZheYe&quot;</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">20</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>musician &#x3D; tag<br>新建了一个类型<code>struct musician</code></p>
+<p>Musician &#x3D; struct musician</p>
+</blockquote>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">score</span> &#123;</span></span><br><span class="line"><span class="type">int</span> c;</span><br><span class="line"><span class="type">int</span> java;</span><br><span class="line"><span class="type">int</span> python;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">musician</span>&#123;</span></span><br><span class="line"><span class="type">char</span> * name;</span><br><span class="line"><span class="type">char</span> gender;</span><br><span class="line"><span class="type">char</span> *album;</span><br><span class="line">score scores;</span><br><span class="line">&#125;;</span><br><span class="line">Musician guo = zhang;</span><br><span class="line"><span class="type">void</span> <span class="title function_">print</span> <span class="params">(<span class="type">const</span> <span class="type">void</span> Musician* m)</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,m-&gt;name);<span class="comment">//(*m).name</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Musician musicains[]=&#123;&#125;;</span><br><span class="line">qsort();</span><br><span class="line"><span class="type">int</span> <span class="title function_">CompareMusician</span><span class="params">(<span class="type">const</span> <span class="type">void</span>*m1,<span class="type">const</span> <span class="type">void</span>*m2)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="type">const</span> Musician*)m1-*(<span class="type">const</span> Musician*)m2;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p><strong>alignment</strong><br>1 word &#x3D; 4 or 8 bytes<br><em>cpu</em>是按word读入<br>1 2 8<br>requirements:</p>
+<ul>
+<li>首个地址mod x 为 0</li>
+<li>尾地址mod x 为 0</li>
+<li>每个元素首地址 mod 自己的byte 为0</li>
+</ul>
+<hr>
+<h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><h3 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h3><p>专门为可能值较少的变量提供的类型</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> <span class="title">gender</span>&#123;</span></span><br><span class="line">MALE,</span><br><span class="line">FEMALE,</span><br><span class="line">&#125;Gender;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>枚举的值可作整数使用,一般由自动生成,也可自己定义欧😗😗😗</p>
+</blockquote>
+<h2 id="linked-lists"><a href="#linked-lists" class="headerlink" title="linked lists"></a>linked lists</h2><p>single or not<br>circular or not<br>4 types</p>
+<blockquote>
+<p>使用者和实现者(声明和实现)<br><code>printf</code> 和 <code>stdio.h</code><br>先思考需要实现什么功能,再写出函数 &#x3D;&#x3D; 先把main函数写好,再写子函数<br><strong>“我们第一件事要做什么”–ant</strong><br>链表的绝大多数操作都是再对节点的指针进行操作,也就是指针的赋值<br>先考虑一般,再考虑极端,再做优化<br>利用好图像来帮助理解</p>
+</blockquote>
+<hr>
+<p><em><code>.h </code></em>(声明)</p>
+<ol>
+<li>define data type</li>
+<li>functions on linked list(declaration)<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">  <span class="type">int</span> val;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; Node;</span><br><span class="line"> <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">list</span>&#123;</span></span><br><span class="line">  Node *head;</span><br><span class="line">  Node *tail;</span><br><span class="line">&#125;LinkedList;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>定义了Node这个数据类型来表示节点(值+指向下一个节点的指针)<br>定义了list来表示一个链表,只需要指向头节点和尾节点的指针即可</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p><em><code>.c</code></em></p>
+<ol>
+<li>functions on linked list(complement)</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ll.h&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p><code>#include&lt;&gt;</code>系统路径</p>
+<p><em><code>josephus.c</code></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include&quot;ll/ll.h&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>路径名要写全</p>
+</blockquote>
+<h2 id="preprocessor"><a href="#preprocessor" class="headerlink" title="preprocessor"></a>preprocessor</h2><p><em>总有一些事用什么语言都不好表达,而我们希望通过程序把它表达出来</em></p>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>c程序——预处理器——-修改后的c程序(指令被删除)——编译器——–目标代码</p>
+<h3 id="预处理指令"><a href="#预处理指令" class="headerlink" title="预处理指令"></a>预处理指令</h3><p>由<code>#</code>开头的一些命令</p>
+<h4 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h4><h5 id="简单的宏"><a href="#简单的宏" class="headerlink" title="简单的宏"></a>简单的宏</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> 标识符 替换列表</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不要在宏定义中添加任何额外的符号<br>在被预处理器处理过的程序后,标识符会被直接替换</p>
+</blockquote>
+<h5 id="带参数的宏"><a href="#带参数的宏" class="headerlink" title="带参数的宏"></a>带参数的宏</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> 标识符(x1,x2,...,xn) 替换列表</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>作简单的函数<br>替换列表中有运算符,一定要将替换列表放在括号中<br>参数一定要加括号</p>
+</blockquote>
+<h5 id="替换列表含有多个语句"><a href="#替换列表含有多个语句" class="headerlink" title="替换列表含有多个语句"></a>替换列表含有多个语句</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ECHO(s)  \</span></span><br><span class="line"><span class="meta">  do &#123;           \</span></span><br><span class="line"><span class="meta">  gets(s);       \</span></span><br><span class="line"><span class="meta">  puts(s);       \</span></span><br><span class="line"><span class="meta">  &#125;while(0)</span></span><br></pre></td></tr></table></figure>
+<h5 id="运算符"><a href="#运算符" class="headerlink" title="#运算符"></a><code>#</code>运算符</h5><p>将宏的一个参数转换为字面串,仅允许出现在带参数的宏的替换列表中</p>
+<h5 id="运算符-1"><a href="#运算符-1" class="headerlink" title="##运算符"></a><code>##</code>运算符</h5><p>将两记号黏合在一起,称为一个记号</p>
+<h5 id="取消宏定义"><a href="#取消宏定义" class="headerlink" title="取消宏定义"></a>取消宏定义</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">undef</span> 标识符</span></span><br></pre></td></tr></table></figure>
+<h5 id="预定义宏"><a href="#预定义宏" class="headerlink" title="预定义宏"></a>预定义宏</h5><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>__LINE__</code></td>
+<td>当前宏所在的行号</td>
+</tr>
+<tr>
+<td><code>__FILE__</code></td>
+<td>当前文件名</td>
+</tr>
+<tr>
+<td><code>__DATE__</code></td>
+<td>编译的日期</td>
+</tr>
+<tr>
+<td><code>__TIME__</code></td>
+<td>编译的时间</td>
+</tr>
+<tr>
+<td><code>__STDC__</code></td>
+<td>如果编译器符合C标准,值为1</td>
+</tr>
+</tbody></table>
+<h4 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h4><p><code>include</code>指令</p>
+<h4 id="文件编译"><a href="#文件编译" class="headerlink" title="文件编译"></a>文件编译</h4><h5 id="if指令和-endif指令"><a href="#if指令和-endif指令" class="headerlink" title="#if指令和#endif指令"></a><code>#if</code>指令和<code>#endif</code>指令</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">if</span> 常量表达式</span></span><br><span class="line">...</span><br><span class="line"><span class="meta"># <span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>表达式为0,之间的程序被删除;反之保留</p>
+</blockquote>
+<h5 id="defined预算符"><a href="#defined预算符" class="headerlink" title="defined预算符"></a><code>defined</code>预算符</h5><p>当<code>defined</code>应用于标识符时,如果标识符是一个定义过的宏,返回1,反之返回0</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> defined(DEBUG)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h5 id="其他指令"><a href="#其他指令" class="headerlink" title="其他指令"></a>其他指令</h5><p><code>#ifdef</code>,<code>ifndef</code>,<code>#elif</code>,<code>#else</code><br><code>#error</code>,<code>#line</code>,<code>#pragma</code></p>
+<h2 id="编写大型程序"><a href="#编写大型程序" class="headerlink" title="编写大型程序"></a>编写大型程序</h2><p>为什么要分源文件和头文件呢?🫠🫠🫠</p>
+<p>“那是一个被遗忘的年代，那时，编译器只认识.c(或.cpp)文件，而不知道.h是何物的年代。</p>
+<p>那时的人们写了很多的.c(或.cpp)文件，渐渐地，人们发现在很多.c(或.cpp)文件中的声明变量或函数原型是相同的，但他们却不得不一个字一个字地重复地将这些内容敲入每个.c(或.cpp)文件。但更为恐怖的是，当其中一个声明有变更时，就需要检查所有的.c(或.cpp)文件，并修改其中的声明，啊~，简直是世界末日降临!</p>
+<p>终于，有人（或许是一些人）再不能忍受这样的折磨，他（们）将重复的部分提取出来，放在一个新文件里，然后在需要的.c(或.cpp)文件中敲入#include XXXX这样的语句。这样即使某个声明发生了变更，也再不需要到处寻找与修改了—世界还是那么美好！</p>
+<p>因为这个新文件，经常被放在.c(或.cpp)文件的头部，所以就给它起名叫做”头文件”，扩展名是.h。</p>
+<p>从此，编译器（其实是其中预处理器）就知道世上除了.c(或.cpp)文件，还有个.h的文件，以及一个叫做#include命令。”</p>
+<h3 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h3><p>内容:函数和变量的定义<br>扩展名:<code>.c</code></p>
+<blockquote>
+<p>其中一个源文件必须包含一个<code>main</code>函数</p>
+</blockquote>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><p><em>放声明的,不是放定义的,主要给人看</em><br>内容:宏定义,类型定义,函数原型,变量声明<br>作用:让源文件共享使用<br>保护头文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> MACRO</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MACRO</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="include指令"><a href="#include指令" class="headerlink" title="include指令"></a><code>include</code>指令</h3><ul>
+<li><code>#include&lt;文件名&gt;</code> 搜寻系统头文件</li>
+<li><code>#include&quot;文件名&quot;</code> 先搜寻当前目录,然后搜寻系统头文件所在目录</li>
+</ul>
+<h3 id="程序的构建"><a href="#程序的构建" class="headerlink" title="程序的构建"></a>程序的构建</h3><ul>
+<li>编译:对源文件编译,生成目标文件(<code>.obj</code>)</li>
+<li>链接:结合目标文件和库函数代码生成可执行程序(<code>.exe</code>)</li>
+</ul>
+<h3 id="makefile文件"><a href="#makefile文件" class="headerlink" title="makefile文件"></a><code>makefile</code>文件</h3><p>包含构建程序的必要信息</p>
+<p>列出作为程序一部分的<strong>文件</strong>,还描述了文件之间的<strong>依赖性</strong></p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><h3 id="储存类型"><a href="#储存类型" class="headerlink" title="储存类型"></a>储存类型</h3><p><code>static</code>和<code>extern</code>各有什么含义?各有什么应用场景?🫥🫥🫥</p>
+<h4 id="变量的性质"><a href="#变量的性质" class="headerlink" title="变量的性质"></a>变量的性质</h4><ul>
+<li>存储期 自动存储期&#x2F;静态存储期</li>
+<li>作用域 块作用域&#x2F;文件作用域</li>
+<li>链接 内部链接&#x2F;外部链接</li>
+</ul>
+<h4 id="auto存储类型"><a href="#auto存储类型" class="headerlink" title="auto存储类型"></a><code>auto</code>存储类型</h4><p>自动,块,无链接</p>
+<blockquote>
+<p>只对属于块的变量有效</p>
+</blockquote>
+<h4 id="static存储类型"><a href="#static存储类型" class="headerlink" title="static存储类型"></a><code>static</code>存储类型</h4><p>😆功能:</p>
+<ul>
+<li>作用在块外部时,<code>static</code>说明变量的名字具有内部链接(不能被其他文件使用)</li>
+<li>作用在块内部时,<code>static</code>说明变量的存储期变成了静态的<blockquote>
+<p>块内的<code>static</code>变量只在程序执行前进行一次初始化<br>还可以进行”信息隐藏”</p>
+</blockquote>
+</li>
+</ul>
+<p>😚应用场景:</p>
+<ul>
+<li>局部变量的重复使用</li>
+<li>全局变量不会与其他文件冲突</li>
+</ul>
+<h4 id="extern存储类型"><a href="#extern存储类型" class="headerlink" title="extern存储类型"></a><code>extern</code>存储类型</h4><p>功能:使几个源文件可以共享同一个变量</p>
+<p>声明🫵</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i;</span><br></pre></td></tr></table></figure>
+<p>这只是声明,而不是定义,不会导致编译器为其分配存储单元,它😆只是告诉编译器<strong>需要访问定义在别处的变量</strong></p>
+<blockquote>
+<p>可以有多次声明,但只能有一次定义<br><code>extern</code>型变量始终具有静态存储期</p>
+</blockquote>
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><h3 id="流"><a href="#流" class="headerlink" title="流"></a>流</h3><p>任意输入的源或任意输出的目的地</p>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>c语言中通过一个指针指向文件,通过指针对文件进行操作</p>
+<h4 id="文件指针"><a href="#文件指针" class="headerlink" title="文件指针"></a>文件指针</h4><p>类型:<code>FILE*</code><br>三个指针常量(标准流😛)</p>
+<table>
+<thead>
+<tr>
+<th>文件指针</th>
+<th>流</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>stdin</code></td>
+<td>标准输入</td>
+<td>键盘</td>
+</tr>
+<tr>
+<td><code>stdout</code></td>
+<td>标准输出</td>
+<td>显示器</td>
+</tr>
+<tr>
+<td><code>stderr</code></td>
+<td>标准误差</td>
+<td>显示器</td>
+</tr>
+</tbody></table>
+<h4 id="文件位置指针"><a href="#文件位置指针" class="headerlink" title="文件位置指针"></a>文件位置指针</h4><p>用来指示当前😝的读写位置</p>
+<ul>
+<li>文件头(set)</li>
+<li>读写当前位置(current)</li>
+<li>文件尾(end)</li>
+</ul>
+<h4 id="文件的打开-关闭"><a href="#文件的打开-关闭" class="headerlink" title="文件的打开&#x2F;关闭"></a>文件的打开&#x2F;关闭</h4><h5 id="fopen函数"><a href="#fopen函数" class="headerlink" title="fopen函数"></a><code>fopen</code>函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FILE* <span class="title function_">fopen</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* <span class="keyword">restrict</span> filename,<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> mode)</span>;</span><br><span class="line">FILE* fp = fopen( , );</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>文件名:包含关于文件位置的信息(驱动器符,路径)<br>模式字符机串(操作方式)<br>文件打开失败:返回<code>NULL</code></p>
+</blockquote>
+<h5 id="fclose函数"><a href="#fclose函数" class="headerlink" title="fclose函数"></a><code>fclose</code>函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fclose</span><span class="params">(FILE* stream)</span>;</span><br><span class="line">fclose( );</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>成功😀关闭,返回0;否则🥲,返回<code>EOF</code></p>
+</blockquote>
+<h5 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h5><table>
+<thead>
+<tr>
+<th><code>mode</code></th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&quot;r&quot;</code></td>
+<td>只读(文件必须存在)</td>
+</tr>
+<tr>
+<td><code>&quot;w&quot;</code></td>
+<td>只写(文件不需要存在,存在则清空,不存在则创建)</td>
+</tr>
+<tr>
+<td><code>&quot;wx&quot;</code></td>
+<td>创建文件用于写</td>
+</tr>
+<tr>
+<td><code>&quot;w+x&quot;</code></td>
+<td>创建文件用于更新</td>
+</tr>
+<tr>
+<td><code>&quot;a&quot;</code></td>
+<td>向文件尾追加数据</td>
+</tr>
+<tr>
+<td><code>&quot;r+&quot;</code></td>
+<td>读和写(从文件头开始)</td>
+</tr>
+<tr>
+<td><code>&quot;w+&quot;</code></td>
+<td>读和写(存在则清空,不存在则创建)</td>
+</tr>
+<tr>
+<td><code>&quot;a+&quot;</code></td>
+<td>读和写(如果文件存在就追加)</td>
+</tr>
+</tbody></table>
+<h4 id="读和写"><a href="#读和写" class="headerlink" title="读和写"></a>读和写</h4><h5 id="读"><a href="#读" class="headerlink" title="读"></a>读</h5><p>按字符读</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(fgetc(fp));</span><br></pre></td></tr></table></figure>
+<p>按字符串读</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rewind(fp);</span><br><span class="line"><span class="type">char</span> buf[<span class="number">100</span>]=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="type">char</span>* str = fgets(buf,<span class="keyword">sizeof</span>(buf),fp);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>先把文件位置指针移到文件头<br>只会读一行<br>把文件格式由<code>UTF-8</code>变成<code>ANSI</code>才能不打出中文乱码,可以正确😊打出中文</p>
+</blockquote>
+<p>格式化读取</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fscanf</span>(fp,<span class="string">&quot;%d&quot;</span>,&amp;i);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> buf[<span class="number">100</span>]=<span class="string">&quot;&quot;</span>;</span><br><span class="line">fgets(buf,<span class="keyword">sizeof</span>(buf),fp);</span><br><span class="line"><span class="built_in">sscanf</span>(buf,<span class="string">&quot;% &quot;</span>, );</span><br></pre></td></tr></table></figure>
+<h5 id="写"><a href="#写" class="headerlink" title="写"></a>写</h5><p>按字符写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fputc(<span class="string">&#x27;x&#x27;</span>,fp);</span><br></pre></td></tr></table></figure>
+<p>按字符串写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fputs</span>(<span class="string">&quot;hxcbdp&quot;</span>,fp);</span><br></pre></td></tr></table></figure>
+<h5 id="feof函数"><a href="#feof函数" class="headerlink" title="feof函数"></a><code>feof</code>函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(!feof(fp))&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="perror函数"><a href="#perror函数" class="headerlink" title="perror函数"></a><code>perror</code>函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FILE* fp = fopen(<span class="string">&quot;xx&quot;</span>,<span class="string">&quot;r&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(fp==<span class="literal">NULL</span>)&#123;</span><br><span class="line">perror(<span class="string">&quot;open file failed&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="solution-题解"><a href="#solution-题解" class="headerlink" title="solution(题解)"></a>solution(题解)</h2><h3 id="十六进制数转浮点数"><a href="#十六进制数转浮点数" class="headerlink" title="十六进制数转浮点数"></a>十六进制数转浮点数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">float</span> frac = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%x&quot;</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">23</span>;++i)</span><br><span class="line">frac += ((( n &amp; <span class="number">0x7fffff</span>)&gt;&gt;i)&amp;<span class="number">1</span>)*powf(<span class="number">0.5</span>,<span class="number">23</span>-i);</span><br><span class="line"><span class="type">float</span> ans_f = ((n&gt;&gt;<span class="number">31</span>)?<span class="number">-1.0f</span>:<span class="number">1.0f</span>)*(((n&gt;&gt;<span class="number">23</span>) &amp; <span class="number">0xff</span>) ? (<span class="number">1</span> + frac)*powf(<span class="number">2</span>,((n&gt;&gt;<span class="number">23</span>)&amp;<span class="number">0xff</span>)<span class="number">-127</span>):frac*powf(<span class="number">2</span>,<span class="number">-126</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="期末项目相关知识"><a href="#期末项目相关知识" class="headerlink" title="期末项目相关知识"></a>期末项目相关知识</h2><p>首先,😋baka怎么做出来这个<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gi4y1Y71f/?vd_source=e2b91665255bc43a0eafd0426b63b1e7">视频</a>就已经很值得学习了</p>
+<h3 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h3><p>有输入（用户行为，比如键盘、鼠标、触摸等等）有输出（设备反馈，比如屏幕显示、声音响应、振动等等）就叫“交互”</p>
+<h3 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h3><p>![屏幕截图 2024-02-04 065911](C:\Users\hxc\Pictures\Screenshots\屏幕截图 2024-02-04 065911.png)</p>
+<h3 id="pixel-像素"><a href="#pixel-像素" class="headerlink" title="pixel(像素)"></a>pixel(像素)</h3><p>显示图片的最小的单元<br>它是物理存在还是虚拟概念？<br>相机上的受光点—数码图像里的一个一个的数据—显示器上显示出来的一个一个小点</p>
+<h3 id="帧率-Frames-Per-Second"><a href="#帧率-Frames-Per-Second" class="headerlink" title="帧率(Frames Per Second)"></a>帧率(Frames Per Second)</h3><p>视觉暂留</p>
+<ul>
+<li>画面会在人的视网膜上短暂地停留</li>
+<li>每张画面之间的差异都很微小</li>
+<li>我们的大脑会把他们处理成运动的画面</li>
+</ul>
+<p>到底要每秒多少幅画面才能流畅?😕😕😕</p>
+<h3 id="音轨"><a href="#音轨" class="headerlink" title="音轨"></a>音轨</h3><p>音序器软件中的一条一条的平行“轨道”<br>电脑的声卡可以处理多个音轨<br>要将音轨进行”处理”,混音</p>
+<h3 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h3><h4 id="JPEG-Joint-Photographic-Experts-Group"><a href="#JPEG-Joint-Photographic-Experts-Group" class="headerlink" title="JPEG(Joint Photographic Experts Group)"></a>JPEG(Joint Photographic Experts Group)</h4><p>后缀:<code>.jpg</code>或<code>.jpeg</code><br>有损压缩</p>
+<h4 id="MP3-Moving-Picture-Experts-Group-Audio-Layer-III"><a href="#MP3-Moving-Picture-Experts-Group-Audio-Layer-III" class="headerlink" title="MP3(Moving Picture Experts Group Audio Layer III)"></a>MP3(Moving Picture Experts Group Audio Layer III)</h4><p>后缀:<code>.mp3</code><br>大幅度地降低音频数据量</p>
+<h4 id="TTF-TrueTypeFont"><a href="#TTF-TrueTypeFont" class="headerlink" title="TTF(TrueTypeFont)"></a>TTF(TrueTypeFont)</h4><p>后缀:<code>.ttf</code><br>字体文件表示方式</p>
+<h3 id="SDL2-Simple-DirectMedia-Layer"><a href="#SDL2-Simple-DirectMedia-Layer" class="headerlink" title="SDL2(Simple DirectMedia Layer)"></a>SDL2(Simple DirectMedia Layer)</h3><p><em>库</em><br>接近底层</p>
+<h4 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h4><ul>
+<li>先翻翻<a target="_blank" rel="noopener" href="https://wiki.libsdl.org/SDL2/FrontPage">文档</a></li>
+<li>封装成对象<br>SDL将硬件层面的事物封装成了许多对象,我们通过各种函数来操作对象,就可以操作硬件</li>
+<li>有开就有关</li>
+</ul>
+<p>render(渲染):通过软件层控制硬件层</p>
+<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p>图像<img src="C:\Users\hxc\AppData\Roaming\Typora\typora-user-images\image-20240205115810379.png" alt="image-20240205115810379"></p>
+<h5 id="打开窗口"><a href="#打开窗口" class="headerlink" title="打开窗口"></a>打开窗口</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SDL_Init(SDL_INIT_VIDEO);</span><br><span class="line">SDL_Window *window=</span><br><span class="line">SDL_CreateWindow(<span class="string">&quot;jump&quot;</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">1000</span>,SDL_WINDOW_SHOWN);</span><br><span class="line">SDL_Delay(<span class="number">1500</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SDL_DestroyWindow(window);</span><br><span class="line">SDL_Quit();</span><br></pre></td></tr></table></figure>
+<h5 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h5><p>背景</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SDL_Init(SDL_INIT_VIDEO);</span><br><span class="line">SDL_Window *window=</span><br><span class="line">SDL_CreateWindow(<span class="string">&quot;jump&quot;</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">1000</span>,SDL_WINDOW_SHOWN);</span><br><span class="line">SDL_Renderer *renderer = SDL_CreateRenderer(window,<span class="number">-1</span>,SDL_RENDERER_ACCELERATED);</span><br><span class="line"></span><br><span class="line">SDL_Delay(<span class="number">1500</span>);</span><br><span class="line"></span><br><span class="line">SDL_SetRenderDrawColor(renderer,<span class="number">255</span>,<span class="number">25</span>,<span class="number">250</span>,<span class="number">250</span>);</span><br><span class="line">SDL_RenderClear(renderer);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br><span class="line"></span><br><span class="line">SDL_DestroyWindow(window);</span><br><span class="line">SDL_Quit();</span><br></pre></td></tr></table></figure>
+<p>画线</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SDL_SetRenderDrawColor(renderer,<span class="number">255</span>,<span class="number">25</span>,<span class="number">250</span>,<span class="number">250</span>);</span><br><span class="line">SDL_RenderDrawLine(renderer,<span class="number">0</span>,<span class="number">0</span>,<span class="number">800</span>,<span class="number">800</span>);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br></pre></td></tr></table></figure>
+<p>画矩形</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SDL_Rect rect =&#123;.x=<span class="number">100</span>,.y=<span class="number">100</span>,.w=<span class="number">200</span>,.h=<span class="number">300</span>&#125;;</span><br><span class="line">SDL_RenderDrawRect(renderer,&amp;rect);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br></pre></td></tr></table></figure>
+<p>运动图像(加入循环)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> x = <span class="number">0</span>;x&lt;=<span class="number">800</span>;x++)&#123;</span><br><span class="line">SDL_SetRenderDrawColor(renderer,<span class="number">255</span>,<span class="number">25</span>,<span class="number">250</span>,<span class="number">250</span>);</span><br><span class="line">SDL_RenderClear(renderer);</span><br><span class="line"></span><br><span class="line">SDL_SetRenderDrawColor(renderer,<span class="number">0xa0</span>,<span class="number">0xc0</span>,<span class="number">250</span>,<span class="number">250</span>);</span><br><span class="line">SDL_Rect rect =&#123;.x=x,.y=<span class="number">100</span>,.w=<span class="number">200</span>,.h=<span class="number">300</span>&#125;;</span><br><span class="line">SDL_RenderDrawRect(renderer,&amp;rect);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还可以引入数学库</p>
+</blockquote>
+<h5 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">SDL_Init(SDL_INIT_VIDEO);</span><br><span class="line">IMG_Init(IMG_INIT_PNG|IMG_INIT_JPG);</span><br><span class="line"></span><br><span class="line">SDL_Window *window=</span><br><span class="line">SDL_CreateWindow(<span class="string">&quot;jump&quot;</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">1000</span>,SDL_WINDOW_SHOWN);</span><br><span class="line">SDL_Renderer *renderer = SDL_CreateRenderer(window,<span class="number">-1</span>,SDL_RENDERER_ACCELERATED);</span><br><span class="line"></span><br><span class="line">SDL_Surface *surface_background = IMG_Load(<span class="string">&quot;./res/girl.png&quot;</span>);</span><br><span class="line">SDL_Texture *texture_background = SDL_CreatTextureFromSurface(renderer,surface_background);</span><br><span class="line"></span><br><span class="line">SDL_RenderCopy(renderer,texture_background,<span class="literal">NULL</span>,<span class="literal">NULL</span>);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br><span class="line">SDL_Delay(<span class="number">3000</span>);</span><br><span class="line"></span><br><span class="line">IMG_Quit();</span><br><span class="line">SDL_Quit();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>空行可以让你的代码层次清晰<br>surface图片<br>texture纹理(可以被画笔<code>renderer</code>画出来)</p>
+</blockquote>
+<h5 id="填充矩形"><a href="#填充矩形" class="headerlink" title="填充矩形"></a>填充矩形</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SDL_Rect rect_background =&#123;.x=<span class="number">0</span>,.y=<span class="number">0</span>&#125;;</span><br><span class="line">SDL_QueryTexture(texture_background,<span class="literal">NULL</span>,<span class="literal">NULL</span>,&amp;rect_background.w,&amp;rect_background.h);</span><br><span class="line">SDL_RenderCopy(renderer,texture_background,<span class="literal">NULL</span>,&amp;rect_background);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一种模式</p>
+</blockquote>
+<h5 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">TTF_Init();</span><br><span class="line"></span><br><span class="line">TTF_Font * font_title = TTF_OpenFont(<span class="string">&quot;./res/Rainbow-Party-2.ttf&quot;</span>,<span class="number">64</span>);</span><br><span class="line">SDL_Color color = &#123;<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>&#125;;</span><br><span class="line">SDL_Surface *surface_title = TTF_RenderText_Blended(font_title,<span class="string">&quot;jump and jump&quot;</span>,color);</span><br><span class="line">SDL_Texture *texture_title = SDL_CreateTextureFromSurface(renderer,surface_title);</span><br><span class="line"></span><br><span class="line">SDL_Rect rect_title = &#123;.x=<span class="number">300</span>,.y=<span class="number">300</span>&#125;;</span><br><span class="line">SDL_QueryTexture(texture_title,<span class="literal">NULL</span>,<span class="literal">NULL</span>,&amp;rect_title.w,&amp;rect_title.h);</span><br><span class="line">SDL_RenderCopy(renderer,texture_title,<span class="literal">NULL</span>,&amp;rect_title);</span><br><span class="line">SDL_RenderPresent(renderer);</span><br><span class="line">SDL_Delay(<span class="number">3000</span>);</span><br><span class="line"></span><br><span class="line">SDL_DestroyTexture(texture_title);</span><br><span class="line">SDL_FreeSurface(surface_title);</span><br><span class="line">TTF_CloseFont(font_title);</span><br><span class="line"></span><br><span class="line">TTF_Quit();</span><br></pre></td></tr></table></figure>
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">SDL_Event event;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">while</span>(SDL_PollEvent(&amp;event))&#123;</span><br><span class="line">            <span class="keyword">switch</span> (event.type) &#123;</span><br><span class="line">                <span class="keyword">case</span> SDL_QUIT:</span><br><span class="line">                    <span class="built_in">puts</span>(<span class="string">&quot;EXITED&quot;</span>);</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> SDL_MOUSEBUTTONDOWN:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;button down at (%d,%d)\n&quot;</span>,event.button.x,event.button.y);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> SDL_MOUSEBUTTONUP:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;button up at (%d,%d)\n&quot;</span>,event.button.x,event.button.y);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> SDL_KEYDOWN:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;key down :%s\n&quot;</span>, SDL_GetKeyName(event.key.keysym.sym));</span><br><span class="line">                    <span class="keyword">if</span>(event.key.keysym.sym==SDLK_ESCAPE)&#123;</span><br><span class="line">                        <span class="built_in">puts</span>(<span class="string">&quot;EXITED&quot;</span>);</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> SDL_KEYUP:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;key up :%s\n&quot;</span>, SDL_GetKeyName(event.key.keysym.sym));</span><br><span class="line">                    <span class="keyword">if</span>(event.key.keysym.sym==SDLK_ESCAPE)&#123;</span><br><span class="line">                        <span class="built_in">puts</span>(<span class="string">&quot;EXITED&quot;</span>);</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            fflush(<span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        SDL_Delay(<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Mix_Init(MIX_INIT_MP3);</span><br><span class="line"></span><br><span class="line">Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,<span class="number">2048</span>);</span><br><span class="line"></span><br><span class="line">Mix_Chunk *sound = MixLoadWAV(<span class="string">&quot;./res/sound.mp3&quot;</span>);</span><br><span class="line">Mix_Music *bgm = MixLoadMUS(<span class="string">&quot;./res/bgm.mp3&quot;</span>);</span><br><span class="line"></span><br><span class="line">Mix_PlayChannel(<span class="number">-1</span>,sound,<span class="number">0</span>);</span><br><span class="line">Mix_PlayMusic(bgm,<span class="number">0</span>);</span><br><span class="line">SDL_Delay(<span class="number">3000</span>);</span><br><span class="line"></span><br><span class="line">Mix_FreeMusic(bgm);</span><br><span class="line">Mix_FreeChunk(sound);</span><br><span class="line"></span><br><span class="line">Mix_CloseAudio();</span><br><span class="line"></span><br><span class="line">Mix_Quit();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以同时播放多个音效,但只能播放一个音乐</p>
+</blockquote>
+<p><strong>指针里有东西 <code>free</code></strong><br>**创建其他的东西 <code>destroy</code> **</p>
+<blockquote>
+<p>Sabiyary :先写框架,慢慢补充细节<br>核心代码是什么<br>其实就像把贴纸一张一张贴上去</p>
+</blockquote>
+<p><strong>你要做的,是让别人以为他们真的在跳,而不是让他们真的在跳</strong></p>
+<h3 id="API-Application-Programming-Interface"><a href="#API-Application-Programming-Interface" class="headerlink" title="API(Application Programming Interface)"></a>API(Application Programming Interface)</h3><p><em>应用程序接口</em></p>
+<p>是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节</p>
+<h2 id="bitwise-operation"><a href="#bitwise-operation" class="headerlink" title="bitwise operation"></a>bitwise operation</h2><table>
+<thead>
+<tr>
+<th align="left">character</th>
+<th>name</th>
+<th>function</th>
+<th>apply</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&amp;</code></td>
+<td>与</td>
+<td>同为1才取1,否则为0</td>
+<td>清零;取一个数的指定位;判断奇偶</td>
+</tr>
+<tr>
+<td align="left">&#96;</td>
+<td>&#96;</td>
+<td>或</td>
+<td>同为0才取0,否则为1</td>
+</tr>
+<tr>
+<td align="left"><code>^</code></td>
+<td>异或</td>
+<td>相同为0,相异为1</td>
+<td>翻转指定位;与0异或值不变;交换<a href="code">^5</a>;交换<code>a^b=b^a</code>;结合<code>a^(b^c)=(a^b)^c</code>;自反<code>a^b^b=a^0=a</code>;<code>x^0=x,x^x=0</code></td>
+</tr>
+<tr>
+<td align="left"><code>~</code></td>
+<td>非</td>
+<td>取反</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>&lt;&lt;</code></td>
+<td>左移</td>
+<td>左移若干位,左边的二进制位丢弃,右边补0</td>
+<td>若左移时高位不为1,左移一位,相当于乘2</td>
+</tr>
+<tr>
+<td align="left"><code>&gt;&gt;</code></td>
+<td>右移</td>
+<td>右移若干位,正数左补0,负数左补1,右边丢弃</td>
+<td>除2</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a,b;</span><br><span class="line">a^=b;</span><br><span class="line">b^=a;</span><br><span class="line">a^=b;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="/images/banner.webp" data-sizes="auto" alt="数据结构与算法" class="lazyload">
+          
+        
+        <a href="/2024/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            数据结构与算法
+          
+        </h3>
+      </div>
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="我道" class="lazyload">
+        
+      
+      <a href="/2024/12/31/%E6%88%91%E9%81%93/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          我道
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CPL"><span class="toc-number">1.</span> <span class="toc-text">CPL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IDE"><span class="toc-number">1.1.</span> <span class="toc-text">IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#loop"><span class="toc-number">1.2.</span> <span class="toc-text">loop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E6%88%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">while语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">do语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.4.</span> <span class="toc-text">for语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%80%80%E5%87%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text">循环的退出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#break%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">break语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">continue语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#goto%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.3.</span> <span class="toc-text">goto语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#basic-type"><span class="toc-number">1.3.</span> <span class="toc-text">basic type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">整数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">浮点类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="toc-number">1.3.4.</span> <span class="toc-text">转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.5.</span> <span class="toc-text">字符处理函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.3.7.</span> <span class="toc-text">类型定义和大小</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#array"><span class="toc-number">1.4.</span> <span class="toc-text">array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.4.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.4.3.</span> <span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.4.4.</span> <span class="toc-text">多维数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#function"><span class="toc-number">1.5.</span> <span class="toc-text">function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E8%B4%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.3.</span> <span class="toc-text">递归函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#program-structure"><span class="toc-number">1.6.</span> <span class="toc-text">program structure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.1.</span> <span class="toc-text">局部变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E5%8F%98%E9%87%8F-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.2.</span> <span class="toc-text">外部变量(全局变量)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.3.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAc%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.6.4.</span> <span class="toc-text">构建c程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pointer"><span class="toc-number">1.7.</span> <span class="toc-text">pointer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pointer-and-arrays"><span class="toc-number">1.7.1.</span> <span class="toc-text">pointer and arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E7%82%B9"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">要点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">内存结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97"><span class="toc-number">1.7.1.4.</span> <span class="toc-text">指针运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#malloc%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.1.5.</span> <span class="toc-text">malloc函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D0"><span class="toc-number">1.7.1.6.</span> <span class="toc-text">两种0</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pointer-and-C-strings"><span class="toc-number">1.7.2.</span> <span class="toc-text">pointer and C strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#double-pointers"><span class="toc-number">1.7.3.</span> <span class="toc-text">double pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-array-%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">pointer array(指针数组)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-and-2D-array-%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88"><span class="toc-number">1.7.3.2.</span> <span class="toc-text">pointer and 2D array(数组指针)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#function-pointers"><span class="toc-number">1.7.4.</span> <span class="toc-text">function pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#argument-6"><span class="toc-number">1.7.4.1.</span> <span class="toc-text">argument^6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#qsort"><span class="toc-number">1.7.4.2.</span> <span class="toc-text">qsort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#return-values"><span class="toc-number">1.7.4.3.</span> <span class="toc-text">return values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#assignment"><span class="toc-number">1.7.4.4.</span> <span class="toc-text">assignment</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#in-array"><span class="toc-number">1.7.4.5.</span> <span class="toc-text">in array</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#decl"><span class="toc-number">1.7.4.6.</span> <span class="toc-text">decl</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct"><span class="toc-number">1.8.</span> <span class="toc-text">struct</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#struct-1"><span class="toc-number">1.8.1.</span> <span class="toc-text">struct</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#difinition"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">difinition</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#union"><span class="toc-number">1.8.2.</span> <span class="toc-text">union</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enum"><span class="toc-number">1.8.3.</span> <span class="toc-text">enum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linked-lists"><span class="toc-number">1.9.</span> <span class="toc-text">linked lists</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#preprocessor"><span class="toc-number">1.10.</span> <span class="toc-text">preprocessor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.10.1.</span> <span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.</span> <span class="toc-text">预处理指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">1.10.2.1.</span> <span class="toc-text">宏定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%8F"><span class="toc-number">1.10.2.1.1.</span> <span class="toc-text">简单的宏</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%AE%8F"><span class="toc-number">1.10.2.1.2.</span> <span class="toc-text">带参数的宏</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%88%97%E8%A1%A8%E5%90%AB%E6%9C%89%E5%A4%9A%E4%B8%AA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.10.2.1.3.</span> <span class="toc-text">替换列表含有多个语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.10.2.1.4.</span> <span class="toc-text">#运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-1"><span class="toc-number">1.10.2.1.5.</span> <span class="toc-text">##运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">1.10.2.1.6.</span> <span class="toc-text">取消宏定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%AE%8F"><span class="toc-number">1.10.2.1.7.</span> <span class="toc-text">预定义宏</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="toc-number">1.10.2.2.</span> <span class="toc-text">条件编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="toc-number">1.10.2.3.</span> <span class="toc-text">文件编译</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#if%E6%8C%87%E4%BB%A4%E5%92%8C-endif%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.3.1.</span> <span class="toc-text">#if指令和#endif指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#defined%E9%A2%84%E7%AE%97%E7%AC%A6"><span class="toc-number">1.10.2.3.2.</span> <span class="toc-text">defined预算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.3.3.</span> <span class="toc-text">其他指令</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E5%A4%A7%E5%9E%8B%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.11.</span> <span class="toc-text">编写大型程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.1.</span> <span class="toc-text">源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.2.</span> <span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#include%E6%8C%87%E4%BB%A4"><span class="toc-number">1.11.3.</span> <span class="toc-text">include指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="toc-number">1.11.4.</span> <span class="toc-text">程序的构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#makefile%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.5.</span> <span class="toc-text">makefile文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">1.12.</span> <span class="toc-text">声明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%82%A8%E5%AD%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.</span> <span class="toc-text">储存类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">1.12.1.1.</span> <span class="toc-text">变量的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#auto%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.2.</span> <span class="toc-text">auto存储类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.3.</span> <span class="toc-text">static存储类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#extern%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.4.</span> <span class="toc-text">extern存储类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">1.13.</span> <span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81"><span class="toc-number">1.13.1.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.13.2.</span> <span class="toc-text">文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88"><span class="toc-number">1.13.2.1.</span> <span class="toc-text">文件指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88"><span class="toc-number">1.13.2.2.</span> <span class="toc-text">文件位置指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%BC%80-%E5%85%B3%E9%97%AD"><span class="toc-number">1.13.2.3.</span> <span class="toc-text">文件的打开&#x2F;关闭</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fopen%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.3.1.</span> <span class="toc-text">fopen函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#fclose%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.3.2.</span> <span class="toc-text">fclose函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.13.2.3.3.</span> <span class="toc-text">模式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%92%8C%E5%86%99"><span class="toc-number">1.13.2.4.</span> <span class="toc-text">读和写</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%BB"><span class="toc-number">1.13.2.4.1.</span> <span class="toc-text">读</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%99"><span class="toc-number">1.13.2.4.2.</span> <span class="toc-text">写</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#feof%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.4.3.</span> <span class="toc-text">feof函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#perror%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.4.4.</span> <span class="toc-text">perror函数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#solution-%E9%A2%98%E8%A7%A3"><span class="toc-number">1.14.</span> <span class="toc-text">solution(题解)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">1.14.1.</span> <span class="toc-text">十六进制数转浮点数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%9F%E6%9C%AB%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">1.15.</span> <span class="toc-text">期末项目相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92"><span class="toc-number">1.15.1.</span> <span class="toc-text">交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RGB"><span class="toc-number">1.15.2.</span> <span class="toc-text">RGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pixel-%E5%83%8F%E7%B4%A0"><span class="toc-number">1.15.3.</span> <span class="toc-text">pixel(像素)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A7%E7%8E%87-Frames-Per-Second"><span class="toc-number">1.15.4.</span> <span class="toc-text">帧率(Frames Per Second)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E8%BD%A8"><span class="toc-number">1.15.5.</span> <span class="toc-text">音轨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.15.6.</span> <span class="toc-text">文件格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JPEG-Joint-Photographic-Experts-Group"><span class="toc-number">1.15.6.1.</span> <span class="toc-text">JPEG(Joint Photographic Experts Group)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MP3-Moving-Picture-Experts-Group-Audio-Layer-III"><span class="toc-number">1.15.6.2.</span> <span class="toc-text">MP3(Moving Picture Experts Group Audio Layer III)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TTF-TrueTypeFont"><span class="toc-number">1.15.6.3.</span> <span class="toc-text">TTF(TrueTypeFont)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDL2-Simple-DirectMedia-Layer"><span class="toc-number">1.15.7.</span> <span class="toc-text">SDL2(Simple DirectMedia Layer)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.15.7.1.</span> <span class="toc-text">使用方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%9B%BE"><span class="toc-number">1.15.7.2.</span> <span class="toc-text">示例图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3"><span class="toc-number">1.15.7.2.1.</span> <span class="toc-text">打开窗口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%98%E5%88%B6"><span class="toc-number">1.15.7.2.2.</span> <span class="toc-text">绘制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.15.7.2.3.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A1%AB%E5%85%85%E7%9F%A9%E5%BD%A2"><span class="toc-number">1.15.7.2.4.</span> <span class="toc-text">填充矩形</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">1.15.7.2.5.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.15.7.2.6.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90"><span class="toc-number">1.15.7.2.7.</span> <span class="toc-text">音乐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API-Application-Programming-Interface"><span class="toc-number">1.15.8.</span> <span class="toc-text">API(Application Programming Interface)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bitwise-operation"><span class="toc-number">1.16.</span> <span class="toc-text">bitwise operation</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep rotate"></span>
+      likeclouders
+    </div>
+    
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        18.8k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:10
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CPL"><span class="toc-number">1.</span> <span class="toc-text">CPL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IDE"><span class="toc-number">1.1.</span> <span class="toc-text">IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#loop"><span class="toc-number">1.2.</span> <span class="toc-text">loop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E6%88%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">while语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">do语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.4.</span> <span class="toc-text">for语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%80%80%E5%87%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text">循环的退出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#break%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">break语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">continue语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#goto%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.5.3.</span> <span class="toc-text">goto语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#basic-type"><span class="toc-number">1.3.</span> <span class="toc-text">basic type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">整数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">浮点类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="toc-number">1.3.4.</span> <span class="toc-text">转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.5.</span> <span class="toc-text">字符处理函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.3.7.</span> <span class="toc-text">类型定义和大小</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#array"><span class="toc-number">1.4.</span> <span class="toc-text">array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.4.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.4.3.</span> <span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.4.4.</span> <span class="toc-text">多维数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#function"><span class="toc-number">1.5.</span> <span class="toc-text">function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E8%B4%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.3.</span> <span class="toc-text">递归函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#program-structure"><span class="toc-number">1.6.</span> <span class="toc-text">program structure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.1.</span> <span class="toc-text">局部变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E5%8F%98%E9%87%8F-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.2.</span> <span class="toc-text">外部变量(全局变量)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.3.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAc%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.6.4.</span> <span class="toc-text">构建c程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pointer"><span class="toc-number">1.7.</span> <span class="toc-text">pointer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pointer-and-arrays"><span class="toc-number">1.7.1.</span> <span class="toc-text">pointer and arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E7%82%B9"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">要点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">内存结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97"><span class="toc-number">1.7.1.4.</span> <span class="toc-text">指针运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#malloc%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.1.5.</span> <span class="toc-text">malloc函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D0"><span class="toc-number">1.7.1.6.</span> <span class="toc-text">两种0</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pointer-and-C-strings"><span class="toc-number">1.7.2.</span> <span class="toc-text">pointer and C strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#double-pointers"><span class="toc-number">1.7.3.</span> <span class="toc-text">double pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-array-%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">pointer array(指针数组)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-and-2D-array-%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88"><span class="toc-number">1.7.3.2.</span> <span class="toc-text">pointer and 2D array(数组指针)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#function-pointers"><span class="toc-number">1.7.4.</span> <span class="toc-text">function pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#argument-6"><span class="toc-number">1.7.4.1.</span> <span class="toc-text">argument^6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#qsort"><span class="toc-number">1.7.4.2.</span> <span class="toc-text">qsort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#return-values"><span class="toc-number">1.7.4.3.</span> <span class="toc-text">return values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#assignment"><span class="toc-number">1.7.4.4.</span> <span class="toc-text">assignment</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#in-array"><span class="toc-number">1.7.4.5.</span> <span class="toc-text">in array</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#decl"><span class="toc-number">1.7.4.6.</span> <span class="toc-text">decl</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct"><span class="toc-number">1.8.</span> <span class="toc-text">struct</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#struct-1"><span class="toc-number">1.8.1.</span> <span class="toc-text">struct</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#difinition"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">difinition</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#union"><span class="toc-number">1.8.2.</span> <span class="toc-text">union</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enum"><span class="toc-number">1.8.3.</span> <span class="toc-text">enum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linked-lists"><span class="toc-number">1.9.</span> <span class="toc-text">linked lists</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#preprocessor"><span class="toc-number">1.10.</span> <span class="toc-text">preprocessor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.10.1.</span> <span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.</span> <span class="toc-text">预处理指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">1.10.2.1.</span> <span class="toc-text">宏定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%8F"><span class="toc-number">1.10.2.1.1.</span> <span class="toc-text">简单的宏</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%AE%8F"><span class="toc-number">1.10.2.1.2.</span> <span class="toc-text">带参数的宏</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%88%97%E8%A1%A8%E5%90%AB%E6%9C%89%E5%A4%9A%E4%B8%AA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.10.2.1.3.</span> <span class="toc-text">替换列表含有多个语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.10.2.1.4.</span> <span class="toc-text">#运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-1"><span class="toc-number">1.10.2.1.5.</span> <span class="toc-text">##运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">1.10.2.1.6.</span> <span class="toc-text">取消宏定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%AE%8F"><span class="toc-number">1.10.2.1.7.</span> <span class="toc-text">预定义宏</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="toc-number">1.10.2.2.</span> <span class="toc-text">条件编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="toc-number">1.10.2.3.</span> <span class="toc-text">文件编译</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#if%E6%8C%87%E4%BB%A4%E5%92%8C-endif%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.3.1.</span> <span class="toc-text">#if指令和#endif指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#defined%E9%A2%84%E7%AE%97%E7%AC%A6"><span class="toc-number">1.10.2.3.2.</span> <span class="toc-text">defined预算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4"><span class="toc-number">1.10.2.3.3.</span> <span class="toc-text">其他指令</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E5%A4%A7%E5%9E%8B%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.11.</span> <span class="toc-text">编写大型程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.1.</span> <span class="toc-text">源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.2.</span> <span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#include%E6%8C%87%E4%BB%A4"><span class="toc-number">1.11.3.</span> <span class="toc-text">include指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="toc-number">1.11.4.</span> <span class="toc-text">程序的构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#makefile%E6%96%87%E4%BB%B6"><span class="toc-number">1.11.5.</span> <span class="toc-text">makefile文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">1.12.</span> <span class="toc-text">声明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%82%A8%E5%AD%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.</span> <span class="toc-text">储存类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">1.12.1.1.</span> <span class="toc-text">变量的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#auto%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.2.</span> <span class="toc-text">auto存储类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.3.</span> <span class="toc-text">static存储类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#extern%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.4.</span> <span class="toc-text">extern存储类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">1.13.</span> <span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81"><span class="toc-number">1.13.1.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.13.2.</span> <span class="toc-text">文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88"><span class="toc-number">1.13.2.1.</span> <span class="toc-text">文件指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88"><span class="toc-number">1.13.2.2.</span> <span class="toc-text">文件位置指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%BC%80-%E5%85%B3%E9%97%AD"><span class="toc-number">1.13.2.3.</span> <span class="toc-text">文件的打开&#x2F;关闭</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#fopen%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.3.1.</span> <span class="toc-text">fopen函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#fclose%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.3.2.</span> <span class="toc-text">fclose函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.13.2.3.3.</span> <span class="toc-text">模式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%92%8C%E5%86%99"><span class="toc-number">1.13.2.4.</span> <span class="toc-text">读和写</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%BB"><span class="toc-number">1.13.2.4.1.</span> <span class="toc-text">读</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%99"><span class="toc-number">1.13.2.4.2.</span> <span class="toc-text">写</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#feof%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.4.3.</span> <span class="toc-text">feof函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#perror%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.2.4.4.</span> <span class="toc-text">perror函数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#solution-%E9%A2%98%E8%A7%A3"><span class="toc-number">1.14.</span> <span class="toc-text">solution(题解)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">1.14.1.</span> <span class="toc-text">十六进制数转浮点数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%9F%E6%9C%AB%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">1.15.</span> <span class="toc-text">期末项目相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92"><span class="toc-number">1.15.1.</span> <span class="toc-text">交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RGB"><span class="toc-number">1.15.2.</span> <span class="toc-text">RGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pixel-%E5%83%8F%E7%B4%A0"><span class="toc-number">1.15.3.</span> <span class="toc-text">pixel(像素)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A7%E7%8E%87-Frames-Per-Second"><span class="toc-number">1.15.4.</span> <span class="toc-text">帧率(Frames Per Second)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E8%BD%A8"><span class="toc-number">1.15.5.</span> <span class="toc-text">音轨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.15.6.</span> <span class="toc-text">文件格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JPEG-Joint-Photographic-Experts-Group"><span class="toc-number">1.15.6.1.</span> <span class="toc-text">JPEG(Joint Photographic Experts Group)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MP3-Moving-Picture-Experts-Group-Audio-Layer-III"><span class="toc-number">1.15.6.2.</span> <span class="toc-text">MP3(Moving Picture Experts Group Audio Layer III)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TTF-TrueTypeFont"><span class="toc-number">1.15.6.3.</span> <span class="toc-text">TTF(TrueTypeFont)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDL2-Simple-DirectMedia-Layer"><span class="toc-number">1.15.7.</span> <span class="toc-text">SDL2(Simple DirectMedia Layer)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.15.7.1.</span> <span class="toc-text">使用方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%9B%BE"><span class="toc-number">1.15.7.2.</span> <span class="toc-text">示例图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3"><span class="toc-number">1.15.7.2.1.</span> <span class="toc-text">打开窗口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%98%E5%88%B6"><span class="toc-number">1.15.7.2.2.</span> <span class="toc-text">绘制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.15.7.2.3.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A1%AB%E5%85%85%E7%9F%A9%E5%BD%A2"><span class="toc-number">1.15.7.2.4.</span> <span class="toc-text">填充矩形</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">1.15.7.2.5.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.15.7.2.6.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90"><span class="toc-number">1.15.7.2.7.</span> <span class="toc-text">音乐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API-Application-Programming-Interface"><span class="toc-number">1.15.8.</span> <span class="toc-text">API(Application Programming Interface)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bitwise-operation"><span class="toc-number">1.16.</span> <span class="toc-text">bitwise operation</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+  </body>
+  </html>
+

@@ -1,0 +1,809 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_tq6stt6tcg';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
+  
+  <title>
+    
+    likeclouders的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="一别京华近十年 此心无日不悠然">
+<meta property="og:type" content="website">
+<meta property="og:title" content="likeclouders的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="likeclouders的博客">
+<meta property="og:description" content="一别京华近十年 此心无日不悠然">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/banner.webp">
+<meta property="article:author" content="likeclouders">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/banner.webp">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="likeclouders的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">Home</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">About</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">Friend</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">likeclouders的博客</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main">
+  
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/%E7%8E%8B%E8%80%85%E7%AC%94%E8%AE%B0/" aria-label="王者笔记"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="王者笔记" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>2.5k words</span>
+        <span><span class="icon-clock"></span>8 mins</span>
+      </div>
+      <h2 class="post-title">王者笔记</h2>
+      <article class="post-article">
+        
+          王者荣耀学习方法
+看高手的视频:自己发现高光和操作,然后试着在实践中使用
+发现自己的不足,复盘
+
+同时规划好发育路线和支援路线，这说到底是团队游戏，没有队友绝对赢不了
+阵容分析
+如果对面冲脸多且爆发高，别那软辅拿硬辅，蔡文姬被对面女娲，孙策，司马懿，鲁班乱杀
+
+节奏点:为可能出现的团战有所意识并且叠好被动，占视野和好位置很重要
+两分钟抢4，叠好被动
+四分钟暴君过中线
+蹲人（双c）
+打脱节的，对面上头或想一人守塔
+进野区
+压中塔时从侧边入，压高地时卖自己压位置
+装小绵羊
+
+操作头像锁定三指左手三指用左手食指指尖或第一个关节左手模式练习：干将绕一圈+配合闪现
+换装换复活复活换名刀
+黄忠
+最后一丝:
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/" aria-label="需求与商业模式"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="需求与商业模式" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>3.7k words</span>
+        <span><span class="icon-clock"></span>12 mins</span>
+      </div>
+      <h2 class="post-title">需求与商业模式</h2>
+      <article class="post-article">
+        
+          [TOC]
+需求与商业模式创新导论为什么互联网大厂能赚钱?
+庞大的用户基数
+功能强大,效率高,让用户产生依赖
+
+
+互联网大厂的最强大功能是什么? 打造一些功能强大的软件赚钱是什么意思?收入大于支出互联网大厂的支出是很大的,为啥还能赚钱呢?因为赚的多且稳定?为啥呢?从谁哪里拿来的钱呢?从客户手里拿来的,有庞大的客户基数
+
+问问题方法
+
+
+IT为人类贡献了什么?使尽可能多的人\主体在尽可能多的时间内以尽可能低的成本相互联系
+
+技术和产品在持续跟新,但需求和邻域没有改变
+这又引发了一个新问题?
+
+大幅降低人人互联成本的意义
+移动互联网的需要
+人类社会组织形式发生巨大改变(交往,政治,商业)
+
+技术与
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/%E5%BE%AE%E7%A7%AF%E5%88%86/" aria-label="微积分"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="微积分" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>1.7k words</span>
+        <span><span class="icon-clock"></span>7 mins</span>
+      </div>
+      <h2 class="post-title">微积分</h2>
+      <article class="post-article">
+        
+          [TOC]
+微积分人生导师李军学会装模作样学会&amp;#x3D;&amp;#x3D;标准数学语言&amp;#x3D;&amp;#x3D;学会每一个公式的推导不要纠结于一分一秒的差距,创新最重要大学是人生最美好的时候,你有大量的时间可以提升自己,思考问题主要要靠自己
+极限极限语言$\varepsilon -N$语言定义:设有数列{$x_n$},若存在A$\in$R,对于任意的$\varepsilon&amp;gt;0$,存在$N_0\in N$,使得当$n&amp;gt;N_0$时,恒有$$|x_n-A|&amp;lt;\varepsilon$$则称数列{$x_n$}以A为极限,也称{$x_n$}收敛于A,记为$$\lim_{x \to n}x_n
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" aria-label="数据结构与算法"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="数据结构与算法" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>4.8k words</span>
+        <span><span class="icon-clock"></span>17 mins</span>
+      </div>
+      <h2 class="post-title">数据结构与算法</h2>
+      <article class="post-article">
+        
+          简介数据
+信息的载体
+由数字 ， 字符 ，其他元素的集合
+数字，非数字
+
+数据结构 Data structure
+数据结构是一个数据对象以及组成该对象的数据成员之间的关系
+Data_Structure&amp;#x3D;{D,R}
+linear structure ； Non-linear structure
+
+分层
+数据的逻辑结构，从用户视图看，是面向问题的。
+数据的物理结构，从具体实现视图看，是面向计算机的。
+相关的操作及其实现。
+
+抽象数据类型 ：Abstract data type
+is a new programming method that part the usage and impl
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/CPL/" aria-label="CPL"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="CPL" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>5.3k words</span>
+        <span><span class="icon-clock"></span>23 mins</span>
+      </div>
+      <h2 class="post-title">CPL</h2>
+      <article class="post-article">
+        
+          [TOC]
+CPLIDEIntegrated Development Environment(集成开发环境)集代码编辑器、编译器、调试器和图形用户界面等为一体的开发环境
+loop组成控制表达式+循环体
+while语句1while(表达式)&amp;#123;语句&amp;#125;
+
+先判定表达式,再执行循环体
+
+do语句1do&amp;#123;语句&amp;#125;while(表达式)
+
+一定会先执行一次
+
+for语句1for(声明或表达式;表达式;表达式)&amp;#123;语句&amp;#125;
+
+可以有多个声明语句可以为空(简洁)
+
+循环的退出break语句跳出switch语句和一层循环
+continue语句跳过本次循环体中剩
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/%E6%88%91%E9%81%93/" aria-label="我道"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="我道" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>748 words</span>
+        <span><span class="icon-clock"></span>2 mins</span>
+      </div>
+      <h2 class="post-title">我道</h2>
+      <article class="post-article">
+        
+          我道
+去做
+惜时
+
+如何做事明确目标，做好计划，完成计划（学习的心态和方法）
+确定目标有了目标就知道要做什么 ，在目标完成前就全力完成目标就行了 , 确定的
+
+知道现在要做什么 : 做好学生的本职 , 学好计算机 , 因为以后你要靠这个吃饭的啊
+这段时间要做什么：完成课业
+这周要做什么：准备数结 ; 准备论文 ; 准备计网 ; 准备习概 ; 准备线代 ; 准备计组
+
+做好计划
+合理地分配时间 , 可变的服务于目标
+
+每一件事也要有计划，有顺序，先做什么再做什么，是很具体的
+
+边做边发现需要什么，然后调整自己的计划
+
+
+学习的心态
+认真专注，做的时候想这一件事就行 , 全神贯注
+做的有意思，乐在
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/31/hello-world/" aria-label="Hello World"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="Hello World" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-31</span>
+        <span><span class="icon-pencil"></span>75 words</span>
+        <span><span class="icon-clock"></span>1 min</span>
+      </div>
+      <h2 class="post-title">Hello World</h2>
+      <article class="post-article">
+        
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
+
+More info: Writing
+Run server1$ hexo ser
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper ">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+
+      
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep rotate"></span>
+      likeclouders
+    </div>
+    
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        18.8k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:10
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+
+    
+  </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+    
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+  </body>
+  </html>
+
