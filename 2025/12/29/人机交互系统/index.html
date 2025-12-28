@@ -1,0 +1,1008 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  data-theme="dark" >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_tq6stt6tcg';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
+  
+  <title>
+    人机交互系统 |
+    
+    likeclouders的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="人机交互概述  简介 🤫🤫🤫概念：HCI（Human Computer Interaction）是一门涉及人类使用的交互式计算系统的设计、评估、实现以及围绕他们的主要现象的研究的学科 HCI的重要性  市场角度：市场更偏向于简单易用的系统，对设计低劣的系统的容忍度越来越差 企业角度：提高员工生产效率，降低产品生产成本和后续开发成本呢 用户角度：获得较高的主观满意度，减少时间、金钱、生命的损">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人机交互系统">
+<meta property="og:url" content="http://example.com/2025/12/29/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="likeclouders的博客">
+<meta property="og:description" content="人机交互概述  简介 🤫🤫🤫概念：HCI（Human Computer Interaction）是一门涉及人类使用的交互式计算系统的设计、评估、实现以及围绕他们的主要现象的研究的学科 HCI的重要性  市场角度：市场更偏向于简单易用的系统，对设计低劣的系统的容忍度越来越差 企业角度：提高员工生产效率，降低产品生产成本和后续开发成本呢 用户角度：获得较高的主观满意度，减少时间、金钱、生命的损">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-12-28T18:41:26.000Z">
+<meta property="article:modified_time" content="2025-12-28T18:41:43.837Z">
+<meta property="article:author" content="likeclouders">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="likeclouders的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">Home</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">About</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">Friend</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="人机交互系统">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">人机交互系统</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-人机交互系统" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/2025/12/29/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-12-28T18:41:26.000Z" itemprop="datePublished">2025-12-29</time>
+    <time style="display: none;" id="post-update-time">2025-12-29</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="人机交互概述"><a class="markdownIt-Anchor" href="#人机交互概述"></a> 人机交互概述</h1>
+<h2 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h2>
+<p>🤫🤫🤫概念：HCI（Human Computer Interaction）是一门涉及人类使用的交互式计算系统的<mark>设计、评估、实现</mark>以及<mark>围绕他们的主要现象</mark>的研究的学科</p>
+<p>HCI的重要性</p>
+<ul>
+<li>市场角度：市场更偏向于<mark>简单易用的系统</mark>，对设计低劣的系统的容忍度越来越差</li>
+<li>企业角度：提高员工<mark>生产效率</mark>，降低产品<mark>生产成本</mark>和后续开发成本呢</li>
+<li>用户角度：获得较高的<mark>主观满意度</mark>，减少<mark>时间、金钱、生命</mark>的损失</li>
+<li>HCI是软件工程人员需要掌握的核心知识之一</li>
+</ul>
+<p>用户体验</p>
+<p>用户体验包含所有与终端-用户交流的方面，包括公司，服务和产品</p>
+<ul>
+<li>用户体验是人与生俱来的感受能力，<mark>不能设计用户体验，而是为用户体验而设计</mark>SIG(Special Interest Group)</li>
+</ul>
+<p>User-Centered Design</p>
+<h1 id="人机交互的历史"><a class="markdownIt-Anchor" href="#人机交互的历史"></a> 人机交互的历史</h1>
+<p>The past is Never dead it’s not even past. 旧的交互方式仍有其存在的必要性,以前的用户从未消失.新的界面可以包含上一代的界面.</p>
+<p>🤫🤫🤫历史</p>
+<ul>
+<li>批处理阶段：ENIAC1946，每次只能一个用户使用，只能使用01编程语言</li>
+<li>联机终端阶段：1950s命令行界面出现</li>
+<li>图形用户界（GUI graphic User Interface）面阶段：1962Sketchpad，可以直接操控</li>
+<li>未来的人机交互：多模态接口</li>
+</ul>
+<p>图形界面是否就优于字符界面呢？</p>
+<p>WhiteSide在1985年就回答了：<mark>不同的交互方式本身在可用性方面没有根本的不同，更重要的是认真对待界面设计的态度</mark>。界面优劣不在于形态本身，两种界面各有优缺点和各自适用用场景，CLI专业化、门槛高、自动化程度高，GUI普及性、易学性、降低认知负荷，核心在于界面是否服务于用户的需求和心智模型。</p>
+<h1 id="交互设计的原则和目标"><a class="markdownIt-Anchor" href="#交互设计的原则和目标"></a> 交互设计的原则和目标</h1>
+<h2 id="ecc模型"><a class="markdownIt-Anchor" href="#ecc模型"></a> ECC模型</h2>
+<p>两个阶段七个步骤</p>
+<ul>
+<li>执行</li>
+<li>
+<ul>
+<li>确定目标</li>
+<li>形成意图</li>
+<li>规划动作序列</li>
+<li>执行动作</li>
+</ul>
+</li>
+<li>评估</li>
+<li>
+<ul>
+<li>感知系统状态</li>
+<li>解释系统状态</li>
+<li>对照目标评估结果</li>
+</ul>
+</li>
+</ul>
+<p>两个隔阂</p>
+<ul>
+<li>执行隔阂：用户为达到目标做的动作与系统允许的动作的区别</li>
+<li>评估隔阂：系统实际状态与用户预期的区别</li>
+</ul>
+<h2 id="可用性目标"><a class="markdownIt-Anchor" href="#可用性目标"></a> 可用性目标</h2>
+<p>为交互设计人员提供一个评估交互产品和用户体验的具体方法</p>
+<ul>
+<li>易学性</li>
+<li>易记性：学会了用不会忘</li>
+<li>效用性：在一定程度上该产品提供了正确的功能，能让用户做他们想做的事</li>
+<li>高效率</li>
+<li>安全性：减少出现危险的情况</li>
+</ul>
+<blockquote>
+<p>用户体验目标：更主观，照顾用户情绪，以说服为主</p>
+<p>超越可用性：关注用户体验而非可用性，以说服为目的的设计，采用巧妙、令人愉快的方式令人信服和舒服</p>
+</blockquote>
+<h2 id="简易可用性工程"><a class="markdownIt-Anchor" href="#简易可用性工程"></a> 简易可用性工程</h2>
+<p>四种技术</p>
+<ul>
+<li>用户和任务观察：深入接触了解用户，不要用你自己的心理去揣测</li>
+<li>场景：两种原型，水平原型（广而浅，界面的表层，流程图等）；垂直原型（强调深度，对所选功能进行完整呈现）</li>
+<li>边做边说：让真实用户在使用特定系统做一些列任务时说出他们所思所想</li>
+<li>启发式评估：专家根据<mark>设计原则</mark>来提问，多个人共同评估</li>
+</ul>
+<h2 id="设计原则"><a class="markdownIt-Anchor" href="#设计原则"></a> 设计原则</h2>
+<p>黄金规则</p>
+<ul>
+<li>
+<p>尽可能保持一致：相似的界面，让其变得熟悉可预测</p>
+</li>
+<li>
+<p>符合普遍可用性：充分考虑用户的熟练程度、年龄范围、身体状况等等不同需求</p>
+</li>
+<li>
+<p>提供信息丰富的反馈：可视化表现如下载的充能条</p>
+</li>
+<li>
+<p>设计说明对话框生成结束信息：让用户知道他们完成了任务，成就感满足感</p>
+</li>
+<li>
+<p>预防并处理错误：给出WARNING界面</p>
+</li>
+<li>
+<p>让操作容易撤销：减轻用户焦虑，让用户勇于尝试新选项</p>
+</li>
+<li>
+<p>支持内部控制点：鼓励用户称为行动的主动者而不是响应者，不要强制对话框和很长的引导序列，让用户自由探索并随时退出</p>
+</li>
+<li>
+<p>减轻短时记忆负担：短时记忆储存十分有限，如主菜单最多放四个功能</p>
+</li>
+</ul>
+<p>十项启发式原则</p>
+<ul>
+<li>系统状态可见度：对于较长的操作给出显示的反馈，让你知道系统现在在干啥，同黄金3</li>
+<li>系统和现实世界吻合：使用现实世界常用的短语、词汇、概念，遵循现实世界的惯例</li>
+<li>用户享有控制权和自主权：提供撤销返回，同黄金67</li>
+<li>一致性和标准化：同黄金1</li>
+<li>避免出错：日历</li>
+<li>依赖识别而非记忆,：同黄金8</li>
+<li>使用的灵活性和高效性：同黄金2</li>
+<li>帮助用户识别诊断恢复错误：同黄金5</li>
+<li>帮助和文档：Guide</li>
+<li>审美感和最小化设计：尽量少的按钮</li>
+</ul>
+<h1 id="评估观察-询问-测试"><a class="markdownIt-Anchor" href="#评估观察-询问-测试"></a> 评估：观察、询问、测试</h1>
+<p>用户在与产品交互时收集关于用户体验的信息，从而改进其设计</p>
+<p>评估泛型</p>
+<ul>
+<li>快速评估：设计人员向<mark>非正式</mark>地向用户了解反馈信息</li>
+<li>可用性测试：评估典型用户执行任务时的情况，<mark>评估人员的控制下</mark></li>
+<li>实地研究：理解用户的实际工作情形，以及对他们的影响，<mark>控制者在用户</mark></li>
+<li>预测性评估：研究人员通过想象或对界面的使用过程进行建模，<mark>根据自己对典型用户的了解，用户可以不在场</mark></li>
+</ul>
+<p>观察用户</p>
+<ul>
+<li>实验室观察：专门为可用性测试而安装配置的固定设备的环境下进行的观察</li>
+<li>现场观察：观察用户在实际使用软件时的情况</li>
+</ul>
+<blockquote>
+<p>区分个人意见和观察数据；培养良好的合作关系</p>
+</blockquote>
+<ul>
+<li>数据记录：纸笔、音视频、日志交互</li>
+<li>数据分析：</li>
+<li>
+<ul>
+<li>定性分析：内容分析（划分数据类别，分析录像数据）；会话分析（仔细分析语义，挖掘说话者目的）；话语分析（语言为反映心理和社会的媒介）</li>
+<li>定量分析：统计分析标注</li>
+<li>分析工具：文本日志、音视频、网络日志</li>
+</ul>
+</li>
+</ul>
+<p>询问用户和专家</p>
+<p>了解用户的需求和对产品的意见</p>
+<ul>
+<li>访谈：非结构化访谈；结构化访谈（预先确立问题，有明确答案）；集体访谈</li>
+<li>问卷调查：搜集统计数据和用户常见意见</li>
+<li>认知走查：专家模拟用户第一次使用产品的想法和动作，大体流程。用户操作+系统反应。加上多个专家和团队协作可以成为协作走查。</li>
+<li>
+<ul>
+<li>不需要用户参与</li>
+<li>不需要可运行的原型</li>
+<li>能找出具体的用户问题</li>
+</ul>
+</li>
+<li>启发式评估：</li>
+<li>
+<ul>
+<li>彻底检查页面</li>
+<li>与十条启发式原则对比</li>
+<li>列举可用性问题</li>
+<li>利用启发式规则对问题解释</li>
+</ul>
+</li>
+</ul>
+<p>用户测试</p>
+<p>DECIDE 六个步骤</p>
+<ul>
+<li>确定评估需要完成的总体目标</li>
+<li>发掘需要回答的具体问题</li>
+<li>选择用于回答具体问题的评估泛型和技术</li>
+<li>标识必须解决的实际问题</li>
+<li>决定如何处理有关道德的问题</li>
+<li>评估解释并表示数据</li>
+</ul>
+<h1 id="交互需求"><a class="markdownIt-Anchor" href="#交互需求"></a> 交互需求</h1>
+<p>目标产品的一种陈述，指定了产品应该做什么</p>
+<p>人物角色的构造</p>
+<ul>
+<li>谁使用</li>
+<li>人群类型、特点</li>
+<li>使用原因</li>
+<li>需要软件的功能</li>
+</ul>
+<p>场景</p>
+<p>表示任务和工作的非正式叙述性描述，用“讲故事”的方式</p>
+<p>过程</p>
+<ul>
+<li>创建问题（简明反应需要改变的情况）和前景综述（完成了的效果）</li>
+<li>头脑风暴</li>
+<li>确定任务角色的期望</li>
+<li>构造场景剧本</li>
+<li>确定需求</li>
+</ul>
+<h1 id="交互系统设计"><a class="markdownIt-Anchor" href="#交互系统设计"></a> 交互系统设计</h1>
+<p>设计框架</p>
+<p>高层次的屏幕布局，定义产品的工作流、行为和组织</p>
+<ul>
+<li>定义外形因素和输入方法</li>
+<li>定义功能和数据元素</li>
+<li>决定功能组合层次</li>
+<li>勾画大致设计框架</li>
+<li>构件关键剧情场景剧本</li>
+<li>验证性的场景</li>
+</ul>
+<p>策略</p>
+<ul>
+<li>加快系统响应时间</li>
+<li>减轻用户记忆负担（记忆两种信息：软件操作，任务所需知识；软件通过回忆用户上次操作预测用户可能操作，将以前操作设为默认值）</li>
+<li>减少用户等待感</li>
+<li>设计好的出错信息</li>
+</ul>
+<p>简化策略</p>
+<ul>
+<li>删除（关注核心，删除残缺功能；删除错误；删除视觉混乱；删除文字）</li>
+<li>组织：分块（7±2原则）；对齐元素；大小（重要性）位置（相似放一起）；感知分层</li>
+<li>隐藏：自定义；渐进展示；适时出现（鼠标放置出现提示）；让功能易于发现（把标签放在哪里比大小更重要）</li>
+<li>转移：设备之间转移（遥控器到电脑）；向用户转移，复杂的用户擅长的留给用户</li>
+</ul>
+<h1 id="人机交互基础知识"><a class="markdownIt-Anchor" href="#人机交互基础知识"></a> 人机交互基础知识</h1>
+<p>人类处理机</p>
+<ul>
+<li>感知处理器：信息被输出到视觉听觉储存区</li>
+<li>认知处理器：输入被输出到工作记忆</li>
+<li>动作处理器：执行动作</li>
+</ul>
+<p>格式塔Gestalt心理学：人是如何感知一个良好的组织模式的（整体），而不是将其视为一系列相互独立的部分</p>
+<p>原则</p>
+<ul>
+<li>相似性原则：空间上靠的较近的部分容易被视为整体，让界面层次清晰</li>
+<li>连续性原则：共线或者相同方向的物体被组合一起</li>
+<li>对称性原则：对称且能够组合为有意义单元的物体组合一起</li>
+<li>闭合性原则：大脑会自动忽视间隙和缺失的部分将其视为一个完整的整体</li>
+<li>主题背景原则：选择一个主体</li>
+</ul>
+<blockquote>
+<p>对比让重点更突出</p>
+</blockquote>
+<p>记忆结构</p>
+<ul>
+<li>感觉记忆：人脑中持续约1秒</li>
+<li>短时记忆：感觉记忆编码而来，持续约30秒，7±2个信息单元</li>
+<li>长时记忆：短时记忆加工而来；必须与长时记忆的信息有联系；容量无限</li>
+</ul>
+<blockquote>
+<p>通过将信息组合成一个个有意义的单位可以帮助我们记住复杂的信息</p>
+</blockquote>
+<h1 id="交互设计模型"><a class="markdownIt-Anchor" href="#交互设计模型"></a> 交互设计模型</h1>
+<p>击键层次：分析用户使用某种交互系统完成特定任务所需的时间的模型</p>
+<ul>
+<li>K：按下某个键的时间</li>
+<li>P：用鼠标指向一个目标的时间</li>
+<li>H：手指在设备间移动的时间</li>
+<li>R：系统响应时间</li>
+<li>M：做某事的心理准备</li>
+</ul>
+<p>放M的启发式规则</p>
+<ul>
+<li>每一步长时记忆操作前需要放置一个M</li>
+<li>KP前放M</li>
+<li>连续的K之间不需要M</li>
+<li>连续的P之间不需要M</li>
+</ul>
+<p>Fitts定律</p>
+<p>预测使用定位设备指向某个目标的时间，就是P</p>
+<p>根据目标的大小、到目标的距离计算</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mi>D</mi><mo>=</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mfrac><mrow><mn>2</mn><mi>A</mi></mrow><mi>W</mi></mfrac><mrow></mrow><mspace linebreak="newline"></mspace><mi>M</mi><mi>T</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>∗</mo><mi>I</mi><mi>D</mi><mspace linebreak="newline"></mspace><mi>I</mi><mi>D</mi><mtext>困难指数，</mtext><mi>M</mi><mi>T</mi><mtext>运动时间，</mtext><mi>A</mi><mtext>运动距离，</mtext><mi>W</mi><mtext>目标宽度</mtext></mrow><annotation encoding="application/x-tex">ID=\log_2{\frac{2A}{W}}{} \newline MT=a+b*ID \newline ID困难指数，MT运动时间，A运动距离，W目标宽度
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mord"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">MT</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord cjk_fallback">困难指数，</span><span class="mord mathnormal" style="margin-right:0.13889em;">MT</span><span class="mord cjk_fallback">运动时间，</span><span class="mord mathnormal">A</span><span class="mord cjk_fallback">运动距离，</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord cjk_fallback">目标宽度</span></span></span></span></span></p>
+<p>大目标、小距离有优势</p>
+<p>边缘本质上是无限大的物体，所以菜单放这里很容易移到</p>
+<p>Hick‘ Law</p>
+<p>一个人的选择越多，所做决定的时间越长；提供更少更集中的选项</p>
+<h1 id="以用户为中心"><a class="markdownIt-Anchor" href="#以用户为中心"></a> 以用户为中心</h1>
+<p>用户参与设计</p>
+<ul>
+<li>重要性：对用户的了解</li>
+<li>方式：设计组成员；邮件、会议等形式</li>
+<li>上下文询问法：</li>
+<li>
+<ul>
+<li>上下文环境</li>
+<li>伙伴关系：开发人员和用户</li>
+<li>解释</li>
+<li>焦点</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="ai And study" class="lazyload">
+        
+      
+      <a href="/2025/10/29/ai-And-study/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          ai And study
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 人机交互概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-number">2.</span> <span class="toc-text"> 人机交互的历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E5%88%99%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text"> 交互设计的原则和目标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ecc%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> ECC模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E6%80%A7%E7%9B%AE%E6%A0%87"><span class="toc-number">3.2.</span> <span class="toc-text"> 可用性目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E6%98%93%E5%8F%AF%E7%94%A8%E6%80%A7%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> 简易可用性工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-number">3.4.</span> <span class="toc-text"> 设计原则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E8%A7%82%E5%AF%9F-%E8%AF%A2%E9%97%AE-%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text"> 评估：观察、询问、测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E9%9C%80%E6%B1%82"><span class="toc-number">5.</span> <span class="toc-text"> 交互需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text"> 交互系统设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.</span> <span class="toc-text"> 人机交互基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text"> 交互设计模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A5%E7%94%A8%E6%88%B7%E4%B8%BA%E4%B8%AD%E5%BF%83"><span class="toc-number">9.</span> <span class="toc-text"> 以用户为中心</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.png" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/123hxc itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/3494362566625879?spm_id_from=333.1007.0.0 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2025
+      <span class="footer-info-sep rotate"></span>
+      likeclouders
+    </div>
+    
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        30.7k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        02:05
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 人机交互概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-number">2.</span> <span class="toc-text"> 人机交互的历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E5%88%99%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text"> 交互设计的原则和目标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ecc%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> ECC模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E6%80%A7%E7%9B%AE%E6%A0%87"><span class="toc-number">3.2.</span> <span class="toc-text"> 可用性目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E6%98%93%E5%8F%AF%E7%94%A8%E6%80%A7%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> 简易可用性工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-number">3.4.</span> <span class="toc-text"> 设计原则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E8%A7%82%E5%AF%9F-%E8%AF%A2%E9%97%AE-%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text"> 评估：观察、询问、测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E9%9C%80%E6%B1%82"><span class="toc-number">5.</span> <span class="toc-text"> 交互需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text"> 交互系统设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.</span> <span class="toc-text"> 人机交互基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text"> 交互设计模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A5%E7%94%A8%E6%88%B7%E4%B8%BA%E4%B8%AD%E5%BF%83"><span class="toc-number">9.</span> <span class="toc-text"> 以用户为中心</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.png" data-sizes="auto" alt="likeclouders" class="lazyload">
+  <div class="sidebar-author-name">likeclouders</div>
+  <div class="sidebar-description">一别京华近十年 此心无日不悠然</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/123hxc itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/3494362566625879?spm_id_from=333.1007.0.0 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          const scriptElement = document.createElement('script');
+          if (script.type) {
+            scriptElement.type = script.type;
+          }
+          scriptElement.text = scriptContent;
+          document.head.appendChild(scriptElement);
+          loadScripts(scripts, index + 1);
+        }
+
+        if (src) {
+          fetch(src)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(scriptContent => {
+              loadScript(scriptContent);
+            })
+            .catch(error => {
+              console.error('Failed to load script:', src, error);
+            });
+        } else {
+          loadScript(script.text);
+        }
+      }
+    }
+    window.Pjax && new window.Pjax({
+      selectors: [
+        "#header img",
+        "#header picture",
+        "head title",
+        "#header-title",
+        "#subtitle-wrap",
+        "#main",
+        ".sidebar-widget",
+        ".sidebar-wrapper",
+        '#mobile-nav',
+        '#lazy-script'
+      ],
+      switches: {
+        "#header-title": Pjax.switches.outerHTML,
+        "#subtitle-wrap": Pjax.switches.outerHTML,
+        "#content": function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.outerHTML = newEl.outerHTML
+          this.onSwitch()
+        },
+        "#mobile-nav": Pjax.switches.outerHTML,
+        '#lazy-script': function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.innerHTML = newEl.innerHTML
+          this.onSwitch()
+        },
+      },
+      cacheBust: false
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+  </body>
+  </html>
+
